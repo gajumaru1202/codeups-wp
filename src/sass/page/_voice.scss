@@ -1,0 +1,50 @@
+@use "global" as *;
+.voice__cards {
+  margin-top: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    position: relative;
+  }
+}
+
+.voice__cards::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    width: 20.9vw;
+    height: 9.58vw;
+    top: -13.89vw;
+    left: -5.56vw;
+    background-image: url("../images/common/blue-fish--right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+.voice__cards::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    width: 4.93vw;
+    height: 11.18vw;
+    bottom: -13.89vw;
+    right: 0;
+    background-image: url("../images/common/sea-horse.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+.voice__button {
+  text-align: center;
+  margin-top: 2.5rem;
+  @include mq(md) {
+    margin-top: 5rem;
+  }
+}
