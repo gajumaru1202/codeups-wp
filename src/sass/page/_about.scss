@@ -1,0 +1,11 @@
+@use "global" as *;
+.about__inner.inner {
+  text-align: center;
+}
+
+.about__contents {
+  margin-top: 3.125rem;
+  @include mq(md) {
+    margin-top: 7.5rem;
+  }
+}

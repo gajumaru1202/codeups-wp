@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.menu__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+}
+
+.menu__items {
+  column-count: 2;
+  gap: 0.4375rem;
+  height: inherit;
+
+  @include mq(md) {
+    column-count: 4;
+    width: 100%;
+  }
+}
+
+.menu__item {
+  display: block;
+}
+
+.menu__item:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
+.menu__link-wrap {
+  margin-left: 1.375rem;
+  color: $white;
+}
+
+.menu__link-main {
+  position: relative;
+  font-size: 1rem;
+  font-weight: $bold;
+}
+
+.menu__link-main a {
+  display: block;
+}
+
+.menu__link-main::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/common/drawer-logo.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.125rem;
+  height: 1.125rem;
+  left: -1.375rem;
+}
+
+.menu__link-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1rem;
+  font-weight: $normal;
+  margin-top: 1.5rem;
+}
+
+.menu__link-sub a {
+  display: block;
+}

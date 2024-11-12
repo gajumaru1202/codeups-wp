@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.js-hamburger.is-active .hamburger__item:first-child {
+  top: 0.21rem;
+  -webkit-transform: translateY(10px) rotate(-330deg);
+  transform: translateY(10px) rotate(-330deg);
+}
+
+.js-hamburger.is-active .hamburger__item:nth-child(2) {
+  opacity: 0;
+}
+
+.js-hamburger.is-active .hamburger__item:last-child {
+  top: 1.4375rem;
+  -webkit-transform: translateY(-10px) rotate(330deg);
+  transform: translateY(-10px) rotate(330deg);
+}
+
+.js-hamburger:focus {
+  opacity: 0.5;
+}

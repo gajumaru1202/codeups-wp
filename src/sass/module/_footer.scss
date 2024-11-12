@@ -1,0 +1,68 @@
+@use "global" as *;
+.footer {
+  background-color: $blue;
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+
+  @include mq(md) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.footer__logo-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @include mq(md) {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+.footer__logo {
+  display: block;
+}
+
+.footer__logo img {
+  max-width: 7.5rem;
+  width: 100%;
+  @include mq(md) {
+    max-width: 12.5rem;
+  }
+}
+
+.footer__sns-logo {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__sns-logo a {
+  max-width: 1.5rem;
+  width: 100%;
+  @include mq(md) {
+    max-width: 2rem;
+  }
+}
+
+.footer__menu {
+  margin-top: 2.5rem;
+  @include mq(md) {
+    margin-top: 1.5rem;
+  }
+}
+
+.footer__copyright {
+  display: block;
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.75rem;
+  font-weight: $normal;
+  color: $white;
+  line-height: 1;
+  @include mq(md) {
+    margin-top: 5rem;
+    font-size: 0.875rem;
+  }
+}
