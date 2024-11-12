@@ -1,0 +1,11 @@
+@use "global" as *;
+.top-about {
+  padding-top: 5rem;
+  padding-bottom: 4.375rem;
+  @include mq(md) {
+    padding-top: 8.75rem;
+    padding-bottom: 10.25rem;
+    position: relative;
+    overflow: hidden;
+  }
+}

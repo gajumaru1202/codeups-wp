@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.information__content {
+  margin-top: 1.5rem;
+  @include mq(md) {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+.information__color-box {
+  width: 100%;
+  @include mq(md) {
+    max-width: 33.75rem;
+  }
+}
+
+.information__img {
+  aspect-ratio: 345 /227;
+  flex-shrink: 0;
+  @include mq(md) {
+    aspect-ratio: 540 / 356;
+  }
+}
+
+.information__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    max-width: 33.75rem;
+  }
+}
+
+.information__body {
+  margin-top: 1.5rem;
+  @include mq(md) {
+    margin-top: 3.75rem;
+    position: relative;
+  }
+}
+
+.information__body-title {
+  color: $black;
+  font-size: 1.25rem;
+  font-weight: $bold;
+  line-height: 1.2;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid $blue;
+  @include mq(md) {
+    font-size: 1.5rem;
+    line-height: 1;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.information__body-text {
+  margin-top: 0.5rem;
+  color: $black;
+  font-size: 1rem;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.information__number {
+  @include mq(md) {
+    position: absolute;
+    left: 3.2rem;
+    bottom: 7rem;
+    color: #000;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-weight: $normal;
+    line-height: 1;
+  }
+}
+
+.information__button {
+  text-align: center;
+  margin-top: 2.5rem;
+}
