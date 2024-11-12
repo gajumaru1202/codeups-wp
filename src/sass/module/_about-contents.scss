@@ -1,0 +1,117 @@
+@use "global" as *;
+.about-contents {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.about-contents::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    width: 13.47vw;
+    height: 12.57vw;
+    bottom: -6.04vw;
+    right: -6.67vw;
+    background-image: url("../images/common/coral.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+  }
+}
+
+.about-contents__visual-wrap {
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
+
+.about-contents__visual-scenery {
+  position: absolute;
+  top: -1.625rem;
+  right: 59.73vw;
+  @media screen and (min-width: 560px) {
+    right: 21rem;
+  }
+  @include mq(md) {
+    top: -5rem;
+    right: 44rem;
+  }
+}
+
+.about-contents__visual-scenery img {
+  width: 34.13vw;
+  max-width: 12.625rem;
+  @include mq(md) {
+    width: 25rem;
+    max-width: 100%;
+  }
+}
+
+.about__visual-underwater {
+  display: flex;
+  justify-content: right;
+}
+
+.about__visual-underwater img {
+  width: 74.93vw;
+  max-width: 27.6875rem;
+  @include mq(md) {
+    width: 55rem;
+    max-width: 100%;
+  }
+}
+
+.about-contents__title {
+  text-align: left;
+  margin-top: 2.5rem;
+  color: $blue;
+  font-size: 2.5rem;
+  font-weight: $normal;
+  line-height: 1;
+  @include mq(md) {
+    margin-top: -28rem;
+    margin-left: 13rem;
+    font-size: 5rem;
+    color: $white;
+    line-height: 1.25;
+    z-index: 500;
+    width: calc(100% - 13rem);
+  }
+}
+
+.about-contents__body {
+  margin-top: 1rem;
+  @include mq(md) {
+    margin-top: 0;
+    display: flex;
+  }
+}
+
+.about-contents__info-wrapper {
+  @include mq(md) {
+    margin-top: -28rem;
+    margin-right: 2.5rem;
+    z-index: 500;
+    width: calc(100% - 19.5rem);
+  }
+}
+
+.about-contents__text {
+  color: $black;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: $normal;
+  line-height: 1.5;
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.about-contents__button {
+  margin-top: 3.125rem;
+  text-align: center;
+  @include mq(md) {
+    margin-top: 2.5rem;
+  }
+}
