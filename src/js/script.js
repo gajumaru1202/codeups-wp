@@ -48,39 +48,37 @@ jQuery(function ($) {
 
 // ヘッダー色変える
 $(document).ready(function () {
-  const $header = $(".js-header"); // ヘッダー要素を取得
-  const mvHeight = $(".js-mv").outerHeight(); // メインビジュアルの高さを取得
+  const $header = $(".js-header");
+  const mvHeight = $(".js-mv").outerHeight();
 
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > mvHeight) {
-      $header.addClass("scrolled"); // 指定位置を過ぎたらクラスを付与
+      $header.addClass("scrolled");
     } else {
-      $header.removeClass("scrolled"); // 指定位置を過ぎていなければクラスを削除
+      $header.removeClass("scrolled");
     }
   });
 });
 
 $(document).ready(function () {
-  // タイトルをフェードアウトし、ローディングアニメーションを開始
   setTimeout(function () {
-    $(".mv__title-wrap").addClass("fade-out"); // タイトルを非表示
+    $(".js-mv-title").addClass("fade-out");
   }, 1000);
 
   // ローディング画像をフェードインして表示
   setTimeout(function () {
-    $(".mv__loading-image").addClass("show"); // ローディング画像をフェードイン
+    $(".js-loading-image").addClass("show");
   }, 1500);
 
-  // ローディングアニメーションが完了した後にタイトルとSwiperコンテナを表示
   setTimeout(function () {
-    $(".mv__title-wrap").removeClass("fade-out").addClass("change-color"); // タイトルを白文字で再表示
-    $(".mv__slider").css("opacity", "1"); // Swiperコンテナをフェードイン
-    $(".mv__loading-image").addClass("slide-out"); // 疑似要素を上にスライドアウト
+    $(".js-mv-title").removeClass("fade-out").addClass("change-color");
+    $(".js-mv-slider").css("opacity", "1");
+    $(".js-loading-image").addClass("slide-out");
   }, 3000);
 
   // Swiperの初期化を実行
   setTimeout(function () {
-    new Swiper(".mv__slider", {
+    new Swiper(".js-mv-slider", {
       loop: true,
       effect: "fade",
       speed: 3000,
@@ -93,13 +91,13 @@ $(document).ready(function () {
 
   // 疑似要素が完全に画面外に移動したら非表示に
   setTimeout(function () {
-    $(".mv__loading-image").css("display", "none");
+    $(".js-loading-image").css("display", "none");
   }, 4000);
 });
 
 // キャンペーンセクション
 $(document).ready(function () {
-  const swiper = new Swiper(".campaign__slider", {
+  const swiper = new Swiper(".js-campaign-slider", {
     slidesPerView: "auto",
     loop: true,
     speed: 6000,
@@ -107,16 +105,15 @@ $(document).ready(function () {
 
     breakpoints: {
       768: {
-        spaceBetween: 40,
-        loop: true, // 無限ループを無効化
-        autoplay: false, // 自動再生を無効化
-        allowTouchMove: true, // マウスドラッグによるスライドを許可
+        spaceBetween: 39,
+        loop: true,
+        autoplay: false,
+        allowTouchMove: true,
         navigation: {
-          // ナビゲーションボタンを有効化
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        speed: 300, // スライド切り替え速度
+        speed: 300,
         slidesPerGroup: 1,
       },
     },
