@@ -33,6 +33,7 @@
 
 .campaign__swiper-slide.swiper-slide {
   width: 17.5rem;
+  height: auto;
   @include mq(md) {
     width: 20.875rem;
   }

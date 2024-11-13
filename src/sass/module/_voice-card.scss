@@ -47,7 +47,7 @@
 }
 
 .voice-card__label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -82,12 +82,12 @@
 }
 
 .voice-card__img img {
-  max-width: 9.4375rem;
+  min-width: 9.4375rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
   @include mq(md) {
-    max-width: 11.25rem;
+    min-width: 11.25rem;
   }
 }
 

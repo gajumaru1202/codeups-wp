@@ -6,7 +6,6 @@ jQuery(function ($) {
     $(".js-drawer").toggleClass("is-active");
     $("body").toggleClass("is-scroll");
 
-    // ARIA属性の更新
     if ($(this).hasClass("is-active")) {
       $(this).attr("aria-expanded", "true");
       $(this).attr("aria-label", "メニューを閉じる");
@@ -16,7 +15,6 @@ jQuery(function ($) {
     }
   });
 
-  // キーボードでのアクセス対応（Enterキーとスペースキーでトグル可能）
   $(".js-hamburger").keydown(function (e) {
     if (
       e.key === "Enter" ||
@@ -29,14 +27,12 @@ jQuery(function ($) {
     }
   });
 
-  // ドロワーナビのリンクをクリックで閉じる
   $(".js-drawer a[href]").on("click", function () {
     $(".js-hamburger").removeClass("is-active");
     $(".js-drawer").removeClass("is-active");
     $("body").removeClass("is-scroll");
   });
 
-  // ウィンドウサイズの変更時にハンバーガー状態をリセット
   $(window).on("resize", function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
       $(".js-hamburger").removeClass("is-active");
@@ -76,11 +72,11 @@ $(document).ready(function () {
     $(".js-loading-image").addClass("slide-out");
   }, 3000);
 
-  // Swiperの初期化を実行
   setTimeout(function () {
     new Swiper(".js-mv-slider", {
       loop: true,
-      effect: "fade",
+      effect: "slide",
+      direction: "vertical",
       speed: 3000,
       allowTouchMove: false,
       autoplay: {
@@ -89,7 +85,6 @@ $(document).ready(function () {
     });
   }, 3500);
 
-  // 疑似要素が完全に画面外に移動したら非表示に
   setTimeout(function () {
     $(".js-loading-image").css("display", "none");
   }, 4000);
@@ -153,7 +148,6 @@ $(function () {
 var box = $(".js-color-box"),
   speed = 700;
 
-//.colorboxの付いた全ての要素に対して下記の処理を行う
 box.each(function () {
   $(this).append('<div class="color"></div>');
   var color = $(this).find($(".color")),
@@ -162,7 +156,7 @@ box.each(function () {
 
   image.css("opacity", "0");
   color.css("width", "0%");
-  //inviewを使って背景色が画面に現れたら処理をする
+
   color.on("inview", function () {
     if (counter == 0) {
       $(this)
