@@ -13,13 +13,13 @@
 }
 
 .campaign__cards {
-  margin-top: 1.5rem;
-  margin-left: calc(50% - 50vw);
-  width: 100vw;
+  margin-top: 1.9rem;
+  margin-left: calc(50% - 50vw + 0.9375rem);
+  width: calc(100vw - 0.9375rem);
   @include mq(md) {
     margin-left: calc(50% - 50vw + 11.25rem);
     width: calc(100vw - 11.25rem);
-    margin-top: 2.5rem;
+    margin-top: 2.6rem;
   }
 }
 
@@ -41,8 +41,10 @@
 .campaign__button {
   margin-top: calc(2.5rem - 0.625rem);
   text-align: center;
+  padding-right: 1.07vw;
   @include mq(md) {
-    margin-top: calc(5rem - 0.625rem);
+    margin-top: 4.375rem;
+    padding-right: 0.37vw;
   }
 }
 
@@ -68,7 +70,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
-    bottom: 15.75rem;
+    bottom: 14.95rem;
     height: 5rem;
     margin: auto;
     width: 5rem;
@@ -78,13 +80,13 @@
 .campaign__swiper-button-prev.swiper-button-prev::after {
   @include mq(md) {
     background-image: url(../images/common/prev.jpg);
-    right: -55rem;
+    right: -58rem;
   }
 }
 
 .campaign__swiper-button-next.swiper-button-next::after {
   @include mq(md) {
     background-image: url(../images/common/next.jpg);
-    right: 3rem;
+    right: 0.6rem;
   }
 }

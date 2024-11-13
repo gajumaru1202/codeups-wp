@@ -1,10 +1,16 @@
 @use "global" as *;
+.blog__inner.inner {
+  padding-right: 1.3125rem;
+  padding-left: 1.3125rem;
+}
+
 .blog__cards {
-  margin-top: 1.5rem;
+  margin-top: 1.9rem;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.35rem;
   @include mq(md) {
+    gap: 2.5rem;
     margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -14,7 +20,9 @@
 .blog__button {
   margin-top: 2.5rem;
   text-align: center;
+  padding-right: 0.8vw;
   @include mq(md) {
     margin-top: 5rem;
+    padding-right: 0.4vw;
   }
 }

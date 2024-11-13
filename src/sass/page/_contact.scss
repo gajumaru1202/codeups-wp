@@ -7,6 +7,9 @@
 .contact__inner.inner {
   text-align: center;
   padding-inline: 2.5rem;
+  @include mq(md) {
+    padding-inline: 1.25rem;
+  }
 }
 
 .contact__contents {
@@ -14,8 +17,8 @@
   @include mq(md) {
     display: flex;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    padding: 5rem 3.125rem;
-    gap: calc(5.125rem / 67.5rem * 100%);
+    padding: 5rem 3.125rem 4.6rem 3.125rem;
+    gap: 5.69vw;
   }
 }
 
@@ -24,17 +27,17 @@
   position: absolute;
   width: 29.07vw;
   height: 13.33vw;
-  top: -8.53vw;
-  right: 0;
+  top: -7.03vw;
+  right: -6.77vw;
   background-image: url("../images/common/blue-fish--left.png");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
   @include mq(md) {
-    top: -2.89vw;
-    right: -7.5vw;
-    width: 20.83vw;
-    height: 9.58vw;
+    height: 10.38vw;
+    right: -9.1vw;
+    top: -2.79vw;
+    width: 21.03vw;
   }
 }
 
@@ -53,11 +56,27 @@
 .contact__content:nth-of-type(2) {
   @include mq(md) {
     border-left: 1px solid $blue;
+    width: 55%;
+    padding-left: 1.13125rem;
   }
 }
 
 .contact__heading-img {
-  border-bottom: 1px solid $blue;
+  position: relative;
+}
+
+.contact__heading-img::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: 0.0625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $blue;
+  @include mq(md) {
+    bottom: -0.125rem;
+  }
 }
 
 .contact__heading-img img {
@@ -70,9 +89,9 @@
 }
 
 .contact__details {
-  margin-top: 1rem;
+  margin-top: 0.88rem;
   @include mq(md) {
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
     display: flex;
     gap: 1.25rem;
   }
@@ -112,20 +131,28 @@
 }
 
 .contact__heading {
-  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.1rem;
   @include mq(md) {
     margin-top: 1.25rem;
   }
 }
 
 .contact__discription {
-  margin-top: 1.25rem;
-  font-size: 0.875rem;
+  margin-top: 0.85rem;
+  font-size: 0.85rem;
   font-weight: $normal;
   line-height: 1.125;
   color: $blue;
+  letter-spacing: 0.03em;
 }
 
 .contact__button {
-  margin-top: 2.5rem;
+  margin-top: 2.45rem;
+  padding-right: 0.8vw;
+  @include mq(md) {
+    margin-top: 2.35rem;
+    padding-right: 0.1vw;
+  }
 }

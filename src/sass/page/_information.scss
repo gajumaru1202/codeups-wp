@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .information__content {
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
   @include mq(md) {
     margin-top: 2.5rem;
     display: flex;
@@ -34,9 +34,9 @@
 }
 
 .information__body {
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
   @include mq(md) {
-    margin-top: 3.75rem;
+    margin-top: 4.05rem;
     position: relative;
   }
 }
@@ -46,37 +46,25 @@
   font-size: 1.25rem;
   font-weight: $bold;
   line-height: 1.2;
-  padding-bottom: 0.25rem;
   border-bottom: 1px solid $blue;
   @include mq(md) {
     font-size: 1.5rem;
     line-height: 1;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
   }
 }
 
 .information__body-text {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
+  font-family: "Noto Sans JP";
   color: $black;
   font-size: 1rem;
   font-weight: $normal;
   line-height: 1.5;
 }
 
-.information__number {
-  @include mq(md) {
-    position: absolute;
-    left: 3.2rem;
-    bottom: 7rem;
-    color: #000;
-    font-family: Inter;
-    font-size: 1.5rem;
-    font-weight: $normal;
-    line-height: 1;
-  }
-}
-
 .information__button {
   text-align: center;
-  margin-top: 2.5rem;
+  margin-top: 2.6rem;
+  padding-right: 0.8vw;
 }
