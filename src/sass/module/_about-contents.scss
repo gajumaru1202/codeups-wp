@@ -11,7 +11,7 @@
     position: absolute;
     width: 13.47vw;
     height: 12.57vw;
-    bottom: -6.04vw;
+    bottom: -6.24vw;
     right: -6.67vw;
     background-image: url("../images/common/coral.png");
     background-repeat: no-repeat;
@@ -29,13 +29,13 @@
 .about-contents__visual-scenery {
   position: absolute;
   top: -1.625rem;
-  right: 59.73vw;
+  right: 58.33vw;
   @media screen and (min-width: 560px) {
-    right: 21rem;
+    right: 19.7rem;
   }
   @include mq(md) {
     top: -5rem;
-    right: 44rem;
+    right: 42.5rem;
   }
 }
 
@@ -70,13 +70,13 @@
   font-weight: $normal;
   line-height: 1;
   @include mq(md) {
-    margin-top: -28rem;
-    margin-left: 13rem;
+    margin-top: -28.8rem;
+    margin-left: 12.5rem;
     font-size: 5rem;
     color: $white;
     line-height: 1.25;
     z-index: 500;
-    width: calc(100% - 13rem);
+    width: calc(100% - 12.5rem);
   }
 }
 
@@ -89,9 +89,10 @@
 }
 
 .about-contents__info-wrapper {
+  margin-top: 1.2rem;
   @include mq(md) {
-    margin-top: -28rem;
-    margin-right: 2.5rem;
+    margin-top: -28.6rem;
+    margin-right: 3.5rem;
     z-index: 500;
     width: calc(100% - 19.5rem);
   }
@@ -109,9 +110,12 @@
 }
 
 .about-contents__button {
-  margin-top: 3.125rem;
+  margin-top: 2.925rem;
   text-align: center;
+  padding-right: 4.53vw;
   @include mq(md) {
-    margin-top: 2.5rem;
+    margin-top: 2.3rem;
+    padding-right: 0;
+    padding-left: 0.625rem;
   }
 }
