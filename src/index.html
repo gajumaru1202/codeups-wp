@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <!-- css -->
@@ -122,13 +122,13 @@
           <div class="drawer__inner inner">
             <div class="drawer-menu menu">
               <div class="menu__inner">
-                <div class="menu__items">
+                <div class="menu__items menu__items--drawer">
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#Campaign">キャンペーン</a>
                       </div>
-                      <div class="menu__link-sub">
+                      <div class="menu__link-sub menu__link-sub--drawer">
                         <a href="#">ライセンス取得</a>
                         <a href="#">貸切体験ダイビング</a>
                         <a href="#">ナイトダイビング</a>
@@ -136,18 +136,18 @@
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#About us">私たちについて</a>
                       </div>
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#Information">ダイビング情報</a>
                       </div>
-                      <div class="menu__link-sub">
+                      <div class="menu__link-sub menu__link-sub--drawer">
                         <a href="#">ライセンス講習</a>
                         <a href="#">体験ダイビング</a>
                         <a href="#">ファンダイビング</a>
@@ -155,25 +155,25 @@
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#Blog">ブログ</a>
                       </div>
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#Voice">お客様の声</a>
                       </div>
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#Price">料金一覧</a>
                       </div>
-                      <div class="menu__link-sub">
+                      <div class="menu__link-sub menu__link-sub--drawer">
                         <a href="#">ライセンス講習</a>
                         <a href="#">体験ダイビング</a>
                         <a href="#">ファンダイビング</a>
@@ -181,15 +181,15 @@
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#FAQ">よくある質問</a>
                       </div>
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
-                      <div class="menu__link-main">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
+                      <div class="menu__link-main menu__link-main--lineheight">
                         <a href="#" target="_blank" rel="noopener noreferrer"
                           >プライバシー<br />ポリシー</a
                         >
@@ -197,7 +197,7 @@
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#" target="_blank" rel="noopener noreferrer"
                           >利用規約</a
@@ -206,7 +206,7 @@
                     </div>
                   </div>
                   <div class="menu__item">
-                    <div class="menu__link-wrap">
+                    <div class="menu__link-wrap menu__link-wrap--drawer">
                       <div class="menu__link-main">
                         <a href="#Contact">お問い合わせ</a>
                       </div>
@@ -224,18 +224,18 @@
       <!-- mv -->
       <section class="top-mv mv js-mv">
         <div class="mv__inner">
-          <div class="mv__title-wrap">
+          <div class="mv__title-wrap js-mv-title">
             <h1 class="mv__main-title">diving</h1>
             <span class="mv__sub-title">into the ocean</span>
           </div>
 
-          <div class="mv__loading-image"></div>
-          <div class="mv__slider swiper">
+          <div class="mv__loading-image js-loading-image"></div>
+          <div class="mv__slider swiper js-mv-slider">
             <div class="mv__swiper-wrapper swiper-wrapper">
               <div class="mv__swiper-slide swiper-slide">
                 <picture>
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 500px)"
                     srcset="./assets/images/common/mv-pc1.jpg"
                   />
                   <img
@@ -247,7 +247,7 @@
               <div class="mv__swiper-slide swiper-slide">
                 <picture>
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 500px)"
                     srcset="./assets/images/common/mv-pc2.jpg"
                   />
                   <img
@@ -259,7 +259,7 @@
               <div class="mv__swiper-slide swiper-slide">
                 <picture>
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 500px)"
                     srcset="./assets/images/common/mv-pc3.jpg"
                   />
                   <img
@@ -271,7 +271,7 @@
               <div class="mv__swiper-slide swiper-slide">
                 <picture>
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 500px)"
                     srcset="./assets/images/common/mv-pc4.jpg"
                   />
                   <img
@@ -295,7 +295,7 @@
             </div>
           </div>
           <div class="campaign__cards campaign-cards">
-            <div class="campaign__slider swiper">
+            <div class="campaign__slider swiper js-campaign-slider">
               <div class="campaign__swiper-wrapper swiper-wrapper">
                 <div class="campaign__swiper-slide swiper-slide">
                   <a href="#" class="campaign__card campaign-card">
@@ -630,7 +630,6 @@
                 当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />
                 正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
               </p>
-              <span class="information__number sp-hidden">768</span>
               <div class="information__button">
                 <div class="button">
                   <span class="button__bg-white"></span>
@@ -821,7 +820,7 @@
               <div class="price__img color-box__img">
                 <picture>
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 500px)"
                     srcset="./assets/images/common/price-pc.jpg"
                   />
                   <img
@@ -903,7 +902,7 @@
                   </li>
                   <li class="price-list__item">
                     <span class="price-list__item-name"
-                      >スペシャルビーチダイビング(2ダイブ)</span
+                      >スペシャルダイビング(2ダイブ)</span
                     >
                     <span class="price-list__item-price">¥24,000</span>
                   </li>
@@ -962,9 +961,10 @@
                     >TEL:0120-000-0000</a
                   >
                   <p class="contact__hours">
-                    営業時間:
-                    <time datetime="08:30">8:30</time>-
-                    <time datetime="19:00">19:00</time>
+                    営業時間:<time datetime="08:30">8:30</time>-<time
+                      datetime="19:00"
+                      >19:00</time
+                    >
                   </p>
                   <p class="contact__holiday">定休日:毎週火曜日</p>
                 </address>
@@ -989,7 +989,9 @@
                   >
                     <span>C</span>ontact
                   </h2>
-                  <p class="section-heading__sub">お問合せ</p>
+                  <p class="section-heading__sub section-heading__sub--contact">
+                    お問い合わせ
+                  </p>
                 </div>
               </div>
               <p class="contact__discription">ご予約・お問い合わせはコチラ</p>
@@ -1093,9 +1095,9 @@
               </div>
               <div class="menu__item">
                 <div class="menu__link-wrap">
-                  <div class="menu__link-main">
+                  <div class="menu__link-main menu__link-main--lineheight">
                     <a href="#" target="_blank" rel="noopener noreferrer"
-                      >プライバシー<br />ポリシー</a
+                      >プライバシー<br class="pc-hidden" />ポリシー</a
                     >
                   </div>
                 </div>
