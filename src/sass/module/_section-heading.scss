@@ -20,14 +20,21 @@
 }
 
 .section-heading__sub {
-  margin-top: 0.25rem;
+  margin-top: 0.75rem;
   color: $blue;
   font-size: 0.75rem;
   font-weight: $normal;
   line-height: 1;
 
   @include mq(md) {
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
+  }
+}
+
+.section-heading__sub.section-heading__sub--contact {
+  margin-top: -0.1875rem;
+  @include mq(md) {
+    margin-top: 0.0125rem;
   }
 }
 

@@ -2,8 +2,11 @@
 .price-list {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.85rem;
   width: 100%;
+  @include mq(md) {
+    gap: 2.8rem;
+  }
 }
 
 .price-list__category-title {
@@ -11,7 +14,7 @@
   font-size: 1rem;
   font-weight: $bold;
   line-height: 1;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.35rem;
   border-bottom: 1px solid $blue;
 }
 
@@ -30,6 +33,7 @@
 
 .price-list__item-name {
   color: $black;
+  font-family: "Noto Sans JP";
   font-size: 0.875rem;
   font-weight: $normal;
   line-height: 1.71429;
