@@ -1,10 +1,10 @@
 @use "global" as *;
 .top-voice {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 5.6rem;
+  padding-bottom: 5.3rem;
   @include mq(md) {
-    padding-top: 8.75rem;
-    padding-bottom: 8.75rem;
+    padding-top: 9.05rem;
+    padding-bottom: 9.05rem;
     position: relative;
     overflow: hidden;
   }

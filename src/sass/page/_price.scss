@@ -1,11 +1,11 @@
 @use "global" as *;
 .price__content {
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
   @include mq(md) {
     margin-top: 2.5rem;
     display: flex;
     flex-direction: row-reverse;
-    gap: calc(93px / 1440px * 100%);
+    gap: 6.56vw;
     position: relative;
   }
 }
@@ -16,12 +16,12 @@
     position: absolute;
     width: 30.35vw;
     height: 13.96vw;
-    bottom: -10.83vw;
-    left: -5.28vw;
+    bottom: -12.43vw;
+    left: -5.48vw;
     background-image: url("../images/common/blue-fish--left.png");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: -1;
+    z-index: 0;
   }
 }
 
@@ -50,16 +50,18 @@
 }
 
 .price__list {
-  margin-top: 2.5rem;
+  margin-top: 2.9rem;
   @include mq(md) {
-    margin-top: 0;
+    margin-top: 0.46875rem;
   }
 }
 
 .price__button {
   margin-top: 2.5rem;
   text-align: center;
+  padding-right: 0.8vw;
   @include mq(md) {
-    margin-top: 5rem;
+    margin-top: 5.1rem;
+    padding-right: 0.3vw;
   }
 }

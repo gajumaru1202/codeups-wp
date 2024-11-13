@@ -1,10 +1,11 @@
 @use "global" as *;
 .voice__cards {
-  margin-top: 1.875rem;
+  margin-top: 2.875rem;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   @include mq(md) {
+    margin-top: 1.975rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     position: relative;
@@ -17,7 +18,7 @@
     position: absolute;
     width: 20.9vw;
     height: 9.58vw;
-    top: -13.89vw;
+    top: -15.09vw;
     left: -5.56vw;
     background-image: url("../images/common/blue-fish--right.png");
     background-repeat: no-repeat;
@@ -44,7 +45,9 @@
 .voice__button {
   text-align: center;
   margin-top: 2.5rem;
+  padding-right: 0.8vw;
   @include mq(md) {
-    margin-top: 5rem;
+    margin-top: 4.9rem;
+    padding-right: 0.3vw;
   }
 }

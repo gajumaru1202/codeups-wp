@@ -1,8 +1,8 @@
 @use "global" as *;
 .top-blog {
-  padding-top: 5rem;
+  padding-top: 5.3rem;
   @include mq(md) {
-    padding-top: 8.75rem;
+    padding-top: 6.35rem;
     position: relative;
   }
 }
@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 63%;
+  height: 60.6%;
   top: 0;
   left: 0;
   z-index: -1;
@@ -27,8 +27,8 @@
     position: absolute;
     width: 30.35vw;
     height: 13.96vw;
-    top: 3.82vw;
-    left: 8.33vw;
+    top: 1.72vw;
+    left: 6.93vw;
     background-image: url("../images/common/white-fish.png");
     background-repeat: no-repeat;
     background-size: contain;
