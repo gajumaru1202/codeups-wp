@@ -12,12 +12,14 @@ $padding-sp: 15px;
 // フォント設定
 ////////////////////
 
-$base-font: "Gotu", "Noto Sans JP", sans-serif;
+$japanese-font: "Noto Sans JP", sans-serif;
+$english-font: "Gotu", sans-serif;
 $sub-font: "Noto Serif", serif;
+$large-font: "Lato", sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
-  font-family: $base-font;
+  font-family: $japanese-font;
 }
 
 body.is-scroll {

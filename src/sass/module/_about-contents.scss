@@ -28,20 +28,17 @@
 
 .about-contents__visual-scenery {
   position: absolute;
-  top: -1.625rem;
-  right: 58.33vw;
-  @media screen and (min-width: 560px) {
-    right: 19.7rem;
-  }
+  top: rem(-26);
+  right: 63.33%;
   @include mq(md) {
-    top: -5rem;
-    right: 42.5rem;
+    top: rem(-80);
+    right: rem(680);
   }
 }
 
 .about-contents__visual-scenery img {
   width: 34.13vw;
-  max-width: 12.625rem;
+  max-width: rem(202);
   @include mq(md) {
     width: 25rem;
     max-width: 100%;
@@ -55,33 +52,34 @@
 
 .about__visual-underwater img {
   width: 74.93vw;
-  max-width: 27.6875rem;
+  max-width: rem(443);
   @include mq(md) {
-    width: 55rem;
+    width: rem(880);
     max-width: 100%;
   }
 }
 
 .about-contents__title {
   text-align: left;
-  margin-top: 2.5rem;
+  margin-top: rem(41.6);
   color: $blue;
-  font-size: 2.5rem;
+  font-family: $english-font;
+  font-size: rem(40);
   font-weight: $normal;
   line-height: 1;
   @include mq(md) {
-    margin-top: -28.8rem;
-    margin-left: 12.5rem;
-    font-size: 5rem;
+    margin-top: rem(-460.8);
+    margin-left: rem(200);
+    font-size: rem(80);
     color: $white;
     line-height: 1.25;
     z-index: 500;
-    width: calc(100% - 12.5rem);
+    width: calc(100% - rem(200));
   }
 }
 
 .about-contents__body {
-  margin-top: 1rem;
+  margin-top: rem(16);
   @include mq(md) {
     margin-top: 0;
     display: flex;
@@ -89,19 +87,19 @@
 }
 
 .about-contents__info-wrapper {
-  margin-top: 1.2rem;
+  margin-top: rem(16);
   @include mq(md) {
-    margin-top: -28.6rem;
-    margin-right: 3.5rem;
+    margin-top: rem(-457.6);
+    margin-right: rem(56);
     z-index: 500;
-    width: calc(100% - 19.5rem);
+    width: calc(100% - rem(312));
   }
 }
 
 .about-contents__text {
   color: $black;
   text-align: left;
-  font-size: 1rem;
+  font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
   @include mq(md) {
@@ -110,12 +108,12 @@
 }
 
 .about-contents__button {
-  margin-top: 2.925rem;
+  margin-top: rem(50);
   text-align: center;
   padding-right: 4.53vw;
   @include mq(md) {
-    margin-top: 2.3rem;
+    margin-top: rem(36.8);
     padding-right: 0;
-    padding-left: 0.625rem;
+    padding-left: rem(10);
   }
 }
