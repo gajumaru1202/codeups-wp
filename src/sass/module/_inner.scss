@@ -2,7 +2,7 @@
 
 @if $startFrom == sp {
   .inner {
-    max-width: 550px;
+    max-width: rem(550);
     width: 100%;
     padding-right: $padding-sp;
     padding-left: $padding-sp;

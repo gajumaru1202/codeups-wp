@@ -2,8 +2,8 @@
 
 .js-hamburger.is-active .hamburger__item:first-child {
   width: 130%;
-  left: -3.8px;
-  top: 0.11rem;
+  left: rem(-3.8);
+  top: rem(1.76);
   -webkit-transform: translateY(10px) rotate(-323.6deg);
   transform: translateY(10px) rotate(-323.6deg);
 }
@@ -13,8 +13,8 @@
 }
 
 .js-hamburger.is-active .hamburger__item:last-child {
-  top: 1.3375rem;
-  left: -0.325rem;
+  top: rem(21.4);
+  left: rem(-5.2);
   width: 130%;
   -webkit-transform: translateY(-10px) rotate(323.6deg);
   transform: translateY(-10px) rotate(323.6deg);
