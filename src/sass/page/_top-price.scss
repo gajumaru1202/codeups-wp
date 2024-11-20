@@ -1,12 +1,12 @@
 @use "global" as *;
 .top-price {
   background-color: $blue-bg;
-  padding-top: 5.3rem;
-  padding-bottom: 5.3rem;
+  padding-top: rem(84.8);
+  padding-bottom: rem(84.8);
   position: relative;
   @include mq(md) {
-    padding-top: 6.25rem;
-    padding-bottom: 6.45rem;
+    padding-top: rem(100);
+    padding-bottom: rem(103.2);
     position: relative;
     overflow: hidden;
   }
