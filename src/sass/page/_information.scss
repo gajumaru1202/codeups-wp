@@ -36,7 +36,7 @@
 .information__body {
   margin-top: rem(24);
   @include mq(md) {
-    margin-top: rem(64.8);
+    margin-top: rem(61.6);
     position: relative;
   }
 }
@@ -50,7 +50,7 @@
   @include mq(md) {
     font-size: rem(24);
     line-height: 1;
-    padding-bottom: rem(4.8);
+    padding-bottom: rem(8);
   }
 }
 

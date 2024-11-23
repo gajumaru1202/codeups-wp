@@ -5,7 +5,7 @@
   gap: rem(45.6);
   width: 100%;
   @include mq(md) {
-    gap: rem(44.8);
+    gap: rem(43.2);
   }
 }
 
@@ -16,6 +16,9 @@
   line-height: 1;
   padding-bottom: rem(5.6);
   border-bottom: 1px solid $blue;
+  @include mq(md) {
+    padding-bottom: rem(7.2);
+  }
 }
 
 .price-list__items {

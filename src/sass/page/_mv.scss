@@ -21,10 +21,29 @@
   color: $blue;
   text-align: center;
   opacity: 1;
-  transition: color 0.5s ease, opacity 1s ease;
+  transition: color 0.3s ease, opacity 1s ease;
   @include mq(md) {
     left: 51.5%;
   }
+}
+
+.mv__loading-title {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  opacity: 0;
+  transition: opacity 1s ease;
+  text-align: center;
+  @include mq(md) {
+    left: 51.5%;
+  }
+}
+
+.mv__loading-title.show {
+  opacity: 1;
 }
 
 .mv__title-wrap.fade-out {
@@ -34,6 +53,7 @@
 .mv__title-wrap.change-color {
   color: $white;
   opacity: 1;
+  transition: color 0.3s ease, opacity 1s ease-in-out;
 }
 
 .mv__main-title {
@@ -70,11 +90,11 @@
   display: flex;
   overflow: hidden;
   opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .mv__loading-image.show {
   opacity: 1;
-  transition: opacity 0.5s ease;
 }
 
 .mv__loading-image::before,
@@ -83,7 +103,7 @@
   flex: 1;
   height: 100vh;
   background-image: url("../images/common/mv-sp1.jpg");
-  background-size: 200% 100%;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   @include mq(md) {
     background-image: url("../images/common/mv-pc1.jpg");
@@ -92,13 +112,28 @@
 .mv__loading-image::before {
   background-position: left center;
   transform: translateY(100%);
-  animation: slideUp 3.5s ease forwards;
+  animation: slideUp 6s ease forwards;
 }
 .mv__loading-image::after {
   background-position: right center;
   transform: translateY(100%);
-  animation: slideUp 3.5s ease forwards;
-  animation-delay: 0.2s;
+  animation: slideUp 6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.mv__loading-image.fade-out {
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .mv__slider {
@@ -106,6 +141,10 @@
   width: 100%;
   opacity: 0;
   transition: opacity 1s ease;
+}
+
+.mv__slider.show {
+  opacity: 1;
 }
 
 .mv__swiper-slide.swiper-slide picture,

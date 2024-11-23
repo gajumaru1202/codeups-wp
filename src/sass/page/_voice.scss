@@ -16,10 +16,10 @@
   @include mq(md) {
     content: "";
     position: absolute;
-    width: 20.9vw;
-    height: 9.58vw;
-    top: -15.09vw;
-    left: -5.56vw;
+    width: clamp(rem(250), 20.9vw, rem(301));
+    height: clamp(rem(70), 9.58vw, rem(138));
+    top: clamp(rem(-216), -15.09vw, rem(-150));
+    left: clamp(rem(-80), -5.56vw, rem(-50));
     background-image: url("../images/common/blue-fish--right.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -31,9 +31,9 @@
   @include mq(md) {
     content: "";
     position: absolute;
-    width: 4.93vw;
-    height: 11.18vw;
-    bottom: -13.89vw;
+    width: clamp(rem(50), 4.93vw, rem(71));
+    height: clamp(rem(130), 11.18vw, rem(162));
+    bottom: clamp(rem(-205), -14.09vw, rem(-170));
     right: 0;
     background-image: url("../images/common/sea-horse.png");
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@
   margin-top: rem(41.6);
   padding-right: 0.8vw;
   @include mq(md) {
-    margin-top: rem(78.4);
+    margin-top: rem(80);
     padding-right: 0.3vw;
   }
 }

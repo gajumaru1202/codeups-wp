@@ -1,25 +1,4 @@
 @use "global" as *;
-.about-contents {
-  @include mq(md) {
-    position: relative;
-  }
-}
-
-.about-contents::after {
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    width: 13.47vw;
-    height: 12.57vw;
-    bottom: -6.24vw;
-    right: -6.67vw;
-    background-image: url("../images/common/coral.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-  }
-}
-
 .about-contents__visual-wrap {
   display: flex;
   justify-content: right;
@@ -89,7 +68,7 @@
 .about-contents__info-wrapper {
   margin-top: rem(16);
   @include mq(md) {
-    margin-top: rem(-457.6);
+    margin-top: rem(-460.8);
     margin-right: rem(56);
     z-index: 500;
     width: calc(100% - rem(312));
@@ -112,7 +91,7 @@
   text-align: center;
   padding-right: 4.53vw;
   @include mq(md) {
-    margin-top: rem(36.8);
+    margin-top: rem(40);
     padding-right: 0;
     padding-left: rem(10);
   }

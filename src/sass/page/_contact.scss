@@ -17,7 +17,7 @@
   @include mq(md) {
     display: flex;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    padding: rem(80) rem(50) rem(73.6) rem(50);
+    padding: rem(81.6) rem(50) rem(75.2) rem(50);
     gap: 5.69vw;
   }
 }
@@ -34,10 +34,10 @@
   background-size: contain;
   z-index: -1;
   @include mq(md) {
-    height: 10.38vw;
-    right: -9.1vw;
-    top: -2.79vw;
-    width: 21.03vw;
+    height: clamp(rem(80), 10.38vw, rem(138));
+    right: clamp(rem(-130), -9.1vw, rem(-80));
+    top: clamp(rem(-40), -2.79vw, rem(-20));
+    width: clamp(rem(250), 21.03vw, rem(301));
   }
 }
 
@@ -151,7 +151,7 @@
   margin-top: rem(42.4);
   padding-right: 0.8vw;
   @include mq(md) {
-    margin-top: rem(37.6);
+    margin-top: rem(40.8);
     padding-right: 0.1vw;
   }
 }

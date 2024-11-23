@@ -9,9 +9,11 @@ jQuery(function ($) {
     if ($(this).hasClass("is-active")) {
       $(this).attr("aria-expanded", "true");
       $(this).attr("aria-label", "メニューを閉じる");
+      lockFocus([".js-hamburger", ".js-drawer"]);
     } else {
       $(this).attr("aria-expanded", "false");
       $(this).attr("aria-label", "メニューを開く");
+      unlockFocus();
     }
   });
 
@@ -31,6 +33,7 @@ jQuery(function ($) {
     $(".js-hamburger").removeClass("is-active");
     $(".js-drawer").removeClass("is-active");
     $("body").removeClass("is-scroll");
+    unlockFocus();
   });
 
   $(window).on("resize", function () {
@@ -38,8 +41,80 @@ jQuery(function ($) {
       $(".js-hamburger").removeClass("is-active");
       $(".js-drawer").removeClass("is-active");
       $("body").removeClass("is-scroll");
+      unlockFocus();
     }
   });
+
+  // ESCキーでドロワーを閉じる
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape" || e.keyCode === 27) {
+      if ($(".js-drawer").hasClass("is-active")) {
+        $(".js-hamburger").removeClass("is-active");
+        $(".js-drawer").removeClass("is-active");
+        $("body").removeClass("is-scroll");
+        unlockFocus();
+      }
+    }
+  });
+
+  // Tabキーでのフォーカス制御
+  let lastFocusedElement;
+  function lockFocus(selectors) {
+    const focusableElements = [];
+    selectors.forEach((selector) => {
+      const container = document.querySelector(selector);
+      if (container) {
+        // フォーカス可能要素を取得
+        focusableElements.push(
+          ...container.querySelectorAll(
+            'a, button, input, [tabindex]:not([tabindex="-1"])'
+          )
+        );
+      }
+    });
+
+    // ハンバーガーボタンもフォーカス可能リストに含める
+    const hamburger = document.querySelector(".js-hamburger");
+    if (hamburger) {
+      focusableElements.unshift(hamburger); // 最初に追加
+    }
+
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    lastFocusedElement = document.activeElement;
+
+    function handleFocusTrap(e) {
+      if (e.key === "Tab" || e.keyCode === 9) {
+        if (e.shiftKey && document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable.focus();
+        } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable.focus();
+        }
+      }
+    }
+
+    document.addEventListener("keydown", handleFocusTrap);
+
+    // 初期フォーカスを設定
+    if (firstFocusable) firstFocusable.focus();
+
+    // フォーカス解除を定義
+    document._unlockFocus = () => {
+      document.removeEventListener("keydown", handleFocusTrap);
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    };
+  }
+
+  function unlockFocus() {
+    if (document._unlockFocus) {
+      document._unlockFocus();
+    }
+  }
 });
 
 // ヘッダー色変える
@@ -59,35 +134,39 @@ $(document).ready(function () {
 $(document).ready(function () {
   setTimeout(function () {
     $(".js-mv-title").addClass("fade-out");
-  }, 1000);
-
-  // ローディング画像をフェードインして表示
-  setTimeout(function () {
-    $(".js-loading-image").addClass("show");
   }, 1500);
 
   setTimeout(function () {
+    $(".js-loading-image").addClass("show");
+  }, 2500);
+
+  setTimeout(function () {
+    $(".js-loading-title").addClass("show");
+  }, 7000);
+
+  setTimeout(function () {
     $(".js-mv-title").removeClass("fade-out").addClass("change-color");
-    $(".js-mv-slider").css("opacity", "1");
-    $(".js-loading-image").addClass("slide-out");
-  }, 3000);
+  }, 8500);
+
+  setTimeout(function () {
+    $(".js-mv-slider").addClass("show");
+  }, 8500);
+
+  setTimeout(function () {
+    $(".js-loading-image").addClass("fade-out");
+  }, 8500);
 
   setTimeout(function () {
     new Swiper(".js-mv-slider", {
       loop: true,
-      effect: "slide",
-      direction: "vertical",
-      speed: 3000,
+      effect: "fade",
+      speed: 3500,
       allowTouchMove: false,
       autoplay: {
-        delay: 3000,
+        delay: 3500,
       },
     });
-  }, 3500);
-
-  setTimeout(function () {
-    $(".js-loading-image").css("display", "none");
-  }, 4000);
+  }, 10500);
 });
 
 // キャンペーンセクション

@@ -2,7 +2,7 @@
 .top-blog {
   padding-top: rem(84.8);
   @include mq(md) {
-    padding-top: rem(101.6);
+    padding-top: rem(99.2);
     position: relative;
   }
 }
@@ -19,19 +19,4 @@
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-.top-blog::before {
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    width: 30.35vw;
-    height: 13.96vw;
-    top: 1.72vw;
-    left: 6.93vw;
-    background-image: url("../images/common/white-fish.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
-  }
 }

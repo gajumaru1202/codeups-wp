@@ -60,7 +60,7 @@
   padding: 0.53rem 0.68rem 0.49rem 0.68rem;
   border: 1px solid $blue;
   @include mq(md) {
-    padding: rem(10.24) rem(15.2) rem(8) rem(15.2);
+    padding: rem(10.24) rem(15.2) rem(9.6) rem(15.2);
   }
 }
 
@@ -99,7 +99,7 @@
   @include mq(md) {
     line-height: 1.5;
     font-size: rem(24);
-    margin-top: rem(10.4);
+    margin-top: rem(8.8);
   }
 }
 

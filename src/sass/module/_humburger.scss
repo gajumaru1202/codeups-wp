@@ -28,7 +28,7 @@
   height: rem(1);
   background: $white;
   right: 0;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 
 .hamburger__item:first-child {
@@ -37,7 +37,7 @@
 
 .hamburger__item:nth-child(2) {
   top: rem(12);
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 
 .hamburger__item:last-child {

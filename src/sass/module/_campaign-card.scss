@@ -31,13 +31,16 @@
   padding-bottom: rem(24);
   @include mq(md) {
     padding-top: rem(24);
-    padding-bottom: rem(40);
+    padding-bottom: rem(43.2);
   }
 }
 
 .campaign-card__badge {
   padding-bottom: rem(6.4);
   border-bottom: 1px solid $blue;
+  @include mq(md) {
+    padding-bottom: rem(7.2);
+  }
 }
 
 .campaign-card__badge-label {
@@ -66,7 +69,7 @@
   font-weight: 500;
   line-height: 1.5;
   @include mq(md) {
-    margin-top: rem(4.8);
+    margin-top: rem(3.2);
   }
 }
 
@@ -79,7 +82,7 @@
   line-height: 1.714;
   @include mq(md) {
     font-size: 1rem;
-    margin-top: rem(17.6);
+    margin-top: rem(14.4);
     padding-right: 1.11vw;
   }
 }

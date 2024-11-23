@@ -34,9 +34,6 @@
 
 .section-heading__sub.section-heading__sub--contact {
   margin-top: rem(-3);
-  @include mq(md) {
-    margin-top: rem(0.2);
-  }
 }
 
 .section-heading__main.section-heading__main--large {

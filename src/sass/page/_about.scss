@@ -6,6 +6,22 @@
 .about__contents {
   margin-top: rem(54.8);
   @include mq(md) {
-    margin-top: rem(120);
+    margin-top: rem(121.6);
+    position: relative;
+  }
+}
+
+.about__contents::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    width: clamp(rem(130), 13.47vw, rem(194));
+    height: clamp(rem(117), 12.57vw, rem(181));
+    bottom: clamp(rem(-90), -6.24vw, rem(-60));
+    right: clamp(rem(-96), -6.67vw, rem(-40));
+    background-image: url("../images/common/coral.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
   }
 }
