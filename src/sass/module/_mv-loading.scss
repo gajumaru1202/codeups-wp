@@ -53,15 +53,21 @@
   object-position: 60% center;
 }
 .mv-loading__image--left {
-  width: 50vw;
+  width: 50%;
   transform: translateY(100%);
   animation: slideUp 6s ease forwards;
+  @include mq(md) {
+    width: 50vw;
+  }
 }
 .mv-loading__image--right {
-  width: 50vw;
+  width: 50%;
   transform: translateY(100%);
   animation: slideUp 6s ease forwards;
   animation-delay: 0.4s;
+  @include mq(md) {
+    width: 50vw;
+  }
 }
 
 .mv-loading.fade-out {
