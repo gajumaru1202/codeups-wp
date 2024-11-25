@@ -58,6 +58,10 @@
   line-height: 1.5;
   padding-bottom: rem(2.88);
   border-bottom: 1px solid $blue;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .blog-card__text {
@@ -66,4 +70,8 @@
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }

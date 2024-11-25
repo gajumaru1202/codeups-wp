@@ -26,6 +26,11 @@ body.is-scroll {
   overflow: hidden;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 // フォントウェイト
 $regular: 300;
 $normal: 400;

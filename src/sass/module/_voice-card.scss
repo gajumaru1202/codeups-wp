@@ -96,10 +96,15 @@
   font-size: rem(16);
   font-weight: 500;
   line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   @include mq(md) {
     line-height: 1.5;
     font-size: rem(24);
     margin-top: rem(8.8);
+    -webkit-line-clamp: 2;
   }
 }
 
@@ -115,4 +120,8 @@
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
 }

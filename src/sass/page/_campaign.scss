@@ -1,11 +1,9 @@
 @use "global" as *;
 .campaign__cards {
   margin-top: rem(30.4);
-  margin-left: calc(50% - 50vw + rem(15));
-  width: calc(100vw - rem(15));
+  margin-left: 0vw;
+  width: 100vw;
   @include mq(md) {
-    margin-left: calc(50% - 50vw + rem(180));
-    width: calc(100vw - rem(180));
     margin-top: rem(41.6);
   }
 }

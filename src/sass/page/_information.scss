@@ -29,14 +29,14 @@
   height: 100%;
   object-fit: cover;
   @include mq(md) {
-    max-width: rem(540);
+    min-width: rem(540);
   }
 }
 
 .information__body {
   margin-top: rem(24);
   @include mq(md) {
-    margin-top: rem(61.6);
+    margin-top: rem(55.2);
     position: relative;
   }
 }
@@ -47,10 +47,14 @@
   font-weight: $bold;
   line-height: 1.4;
   border-bottom: 1px solid $blue;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
   @include mq(md) {
     font-size: rem(24);
-    line-height: 1;
-    padding-bottom: rem(8);
+    line-height: 1.5;
+    padding-bottom: rem(2.4);
   }
 }
 
@@ -60,6 +64,10 @@
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
 }
 
 .information__button {

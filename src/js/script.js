@@ -132,6 +132,8 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $("body").addClass("no-scroll");
+
   setTimeout(function () {
     $(".js-mv-title").addClass("fade-out");
   }, 1500);
@@ -166,6 +168,7 @@ $(document).ready(function () {
         delay: 3500,
       },
     });
+    $("body").removeClass("no-scroll");
   }, 10500);
 });
 

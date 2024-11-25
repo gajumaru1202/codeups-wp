@@ -68,6 +68,10 @@
   font-size: rem(16);
   font-weight: 500;
   line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
   @include mq(md) {
     margin-top: rem(3.2);
   }
