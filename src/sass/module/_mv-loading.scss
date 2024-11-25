@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100;
+  width: 100vw;
   height: 100vh;
   z-index: 500;
   display: flex;
@@ -38,7 +38,7 @@
 }
 
 .mv-loading__image-wrap {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   width: auto;
   flex-shrink: 0;
@@ -53,12 +53,12 @@
   object-position: 60% center;
 }
 .mv-loading__image--left {
-  width: 50%;
+  width: 50vw;
   transform: translateY(100%);
   animation: slideUp 6s ease forwards;
 }
 .mv-loading__image--right {
-  width: 50%;
+  width: 50vw;
   transform: translateY(100%);
   animation: slideUp 6s ease forwards;
   animation-delay: 0.4s;
