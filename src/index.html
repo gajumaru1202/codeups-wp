@@ -229,21 +229,31 @@
             <span class="mv__sub-title">into the ocean</span>
           </div>
 
-          <div class="mv__loading-image js-loading-image"></div>
+          <div class="mv__loading mv-loading js-loading-image">
+            <div class="mv-loading__image-wrap">
+              <div class="mv-loading__image--left">
+                <img
+                  src="./assets/images/common/loading-image__left.jpg"
+                  alt="海亀が透き通った青い海を泳いでいる様子"
+                />
+              </div>
+              <div class="mv-loading__image--right">
+                <img
+                  src="./assets/images/common/loading-image__right.jpg"
+                  alt="海亀が透き通った青い海を泳いでいる様子"
+                />
+              </div>
+            </div>
+            <div class="mv-loading__title js-loading-title">
+              <span class="mv-loading__main-title mv__main-title">diving</span>
+              <span class="mv-loading__sub-title mv__sub-title"
+                >into the ocean</span
+              >
+            </div>
+          </div>
+
           <div class="mv__slider swiper js-mv-slider">
             <div class="mv__swiper-wrapper swiper-wrapper">
-              <div class="mv__swiper-slide swiper-slide">
-                <picture>
-                  <source
-                    media="(min-width: 500px)"
-                    srcset="./assets/images/common/mv-pc1.jpg"
-                  />
-                  <img
-                    src="./assets/images/common/mv-sp1.jpg"
-                    alt="海亀が透き通った青い海を泳いでいる様子"
-                  />
-                </picture>
-              </div>
               <div class="mv__swiper-slide swiper-slide">
                 <picture>
                   <source
@@ -280,6 +290,18 @@
                   />
                 </picture>
               </div>
+              <div class="mv__swiper-slide swiper-slide">
+                <picture>
+                  <source
+                    media="(min-width: 500px)"
+                    srcset="./assets/images/common/mv-pc1.jpg"
+                  />
+                  <img
+                    src="./assets/images/common/mv-sp1.jpg"
+                    alt="海亀が透き通った青い海を泳いでいる様子"
+                  />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -287,10 +309,10 @@
 
       <!-- キャンペーンセクション -->
       <section id="Campaign" class="campaign top-campaign">
-        <div class="campaign__inner">
+        <div class="campaign__inner inner">
           <div class="campaign__heading">
             <div class="section-heading">
-              <h2 class="section-heading__main"><span>C</span>ampaign</h2>
+              <h2 class="section-heading__main">Campaign</h2>
               <p class="section-heading__sub">キャンペーン</p>
             </div>
           </div>
@@ -568,23 +590,35 @@
         <div class="about__inner inner">
           <div class="about__heading">
             <div class="section-heading">
-              <h2 class="section-heading__main"><span>A</span>bout us</h2>
+              <h2 class="section-heading__main">About us</h2>
               <p class="section-heading__sub">私たちについて</p>
             </div>
           </div>
           <div class="about__contents about-contents">
             <div class="about-contents__visual-wrap">
               <div class="about-contents__visual-scenery">
-                <img
-                  src="./assets/images/common/about1.jpg"
-                  alt="青空と瓦屋根のシーサー"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/about1-pc.jpg"
+                  />
+                  <img
+                    src="./assets/images/common/about1-sp.jpg"
+                    alt="青空と瓦屋根のシーサー"
+                  />
+                </picture>
               </div>
               <div class="about__visual-underwater">
-                <img
-                  src="./assets/images/common/about2.jpg"
-                  alt="青い海の中を泳ぐ黄色い魚"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/about2-pc.jpg"
+                  />
+                  <img
+                    src="./assets/images/common/about2-sp.jpg"
+                    alt="青い海の中を泳ぐ黄色い魚"
+                  />
+                </picture>
               </div>
             </div>
             <div class="about-contents__body">
@@ -611,7 +645,7 @@
         <div class="information__inner inner">
           <div class="information__heading">
             <div class="section-heading">
-              <h2 class="section-heading__main"><span>I</span>nformation</h2>
+              <h2 class="section-heading__main">Information</h2>
               <p class="section-heading__sub">ダイビング情報</p>
             </div>
           </div>
@@ -647,7 +681,7 @@
           <div class="blog__heading">
             <div class="section-heading">
               <h2 class="section-heading__main section-heading__main--white">
-                <span>B</span>log
+                Blog
               </h2>
               <p class="section-heading__sub section-heading__sub--white">
                 ブログ
@@ -730,7 +764,7 @@
         <div class="voice__inner inner">
           <div class="voice__heading">
             <div class="section-heading">
-              <h2 class="section-heading__main"><span>V</span>oice</h2>
+              <h2 class="section-heading__main">Voice</h2>
               <p class="section-heading__sub">お客様の声</p>
             </div>
           </div>
@@ -810,7 +844,7 @@
         <div class="price__inner inner">
           <div class="price__heading">
             <div class="section-heading">
-              <h2 class="section-heading__main"><span>P</span>rice</h2>
+              <h2 class="section-heading__main">Price</h2>
               <p class="section-heading__sub">料金一覧</p>
             </div>
           </div>
@@ -987,7 +1021,7 @@
                   <h2
                     class="section-heading__main section-heading__main--large"
                   >
-                    <span>C</span>ontact
+                    Contact
                   </h2>
                   <p class="section-heading__sub section-heading__sub--contact">
                     お問い合わせ
