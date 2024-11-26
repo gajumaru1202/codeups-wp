@@ -39,22 +39,17 @@
 
 .mv-loading__image-wrap {
   display: flex;
-  width: auto;
   flex-shrink: 0;
   height: 100%;
-  @include mq(md) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .mv-loading__image--left,
 .mv-loading__image--right {
   flex: 1;
   height: 100%;
-  @include mq(md) {
-    object-fit: cover;
-    object-position: center;
-  }
+  object-fit: cover;
+  object-position: center;
 }
 
 .mv-loading__image--left img,
