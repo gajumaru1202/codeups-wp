@@ -16,7 +16,7 @@
   }
 }
 
-.section-heading__main span {
+.section-heading__main::first-letter {
   color: $blue;
 }
 
@@ -46,7 +46,7 @@
   }
 }
 
-.section-heading__main.section-heading__main--white span {
+.section-heading__main.section-heading__main--white::first-letter {
   @include mq(md) {
     color: $white;
   }
