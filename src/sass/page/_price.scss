@@ -6,22 +6,6 @@
     display: flex;
     flex-direction: row-reverse;
     gap: clamp(rem(30), 6.56vw, rem(95));
-    position: relative;
-  }
-}
-
-.price__content::after {
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    width: clamp(rem(350), 30.35vw, rem(437));
-    height: clamp(rem(120), 13.96vw, rem(201));
-    bottom: clamp(rem(-178), -12.43vw, rem(-130));
-    left: clamp(rem(-81), -5.48vw, rem(-44));
-    background-image: url("../images/common/blue-fish--left.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 0;
   }
 }
 
@@ -59,9 +43,7 @@
 .price__button {
   margin-top: rem(40);
   text-align: center;
-  padding-right: 0.8vw;
   @include mq(md) {
     margin-top: rem(80);
-    padding-right: 0.3vw;
   }
 }

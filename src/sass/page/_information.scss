@@ -1,5 +1,4 @@
 @use "global" as *;
-
 .information__content {
   margin-top: rem(30.4);
   @include mq(md) {
@@ -73,5 +72,4 @@
 .information__button {
   text-align: center;
   margin-top: rem(40);
-  padding-right: 0.8vw;
 }

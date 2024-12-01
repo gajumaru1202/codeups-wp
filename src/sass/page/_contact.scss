@@ -1,7 +1,7 @@
 @use "global" as *;
 .contact {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .contact__inner.inner {
@@ -18,7 +18,8 @@
     display: flex;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     padding: rem(81.6) rem(50) rem(75.2) rem(50);
-    gap: 5.69vw;
+    margin-block: rem(10);
+    gap: min(rem(82), 5.69vw);
   }
 }
 
@@ -34,10 +35,10 @@
   background-size: contain;
   z-index: -1;
   @include mq(md) {
-    height: clamp(rem(80), 10.38vw, rem(138));
-    right: clamp(rem(-130), -9.1vw, rem(-80));
-    top: clamp(rem(-40), -2.79vw, rem(-20));
-    width: clamp(rem(250), 21.03vw, rem(301));
+    width: min(rem(301), 20.9vw);
+    height: min(rem(138), 9.58vw);
+    top: rem(-40);
+    right: calc(50% - min(48vw, rem(670.4)));
   }
 }
 
@@ -93,7 +94,7 @@
   @include mq(md) {
     margin-top: rem(25.6);
     display: flex;
-    gap: rem(20);
+    gap: min(rem(20), 1.09vw);
   }
 }
 
@@ -149,9 +150,7 @@
 
 .contact__button {
   margin-top: rem(42.4);
-  padding-right: 0.8vw;
   @include mq(md) {
     margin-top: rem(40.8);
-    padding-right: 0.1vw;
   }
 }

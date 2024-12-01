@@ -1,0 +1,7 @@
+@use "global" as *;
+.top-footer {
+  margin-top: rem(94.8);
+  @include mq(md) {
+    margin-top: cla(rem(140) - rem(10));
+  }
+}

@@ -27,11 +27,8 @@
 .campaign__button {
   margin-top: calc(rem(41.6) - rem(10));
   text-align: center;
-  padding-right: 1.07vw;
-  padding-bottom: rem(10);
   @include mq(md) {
     margin-top: rem(70.4);
-    padding-right: 0.37vw;
   }
 }
 
@@ -39,13 +36,19 @@
 .campaign__swiper-button-next.swiper-button-next {
   display: none;
   @include mq(md) {
+    position: absolute;
+    top: rem(347.2);
     display: block;
     width: rem(1);
     height: rem(1);
     outline: none;
     transition: opacity 0.3s;
   }
-  &:hover {
+}
+
+@media (any-hover: hover) {
+  .campaign__swiper-button-prev.swiper-button-prev:hover,
+  .campaign__swiper-button-next.swiper-button-next:hover {
     opacity: 0.7;
   }
 }
@@ -57,23 +60,22 @@
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
-    bottom: rem(185.6);
-    height: rem(80);
-    margin: auto;
-    width: rem(80);
+    top: rem(-324.8);
+    height: min(rem(80), 5.56vw);
+    width: min(rem(80), 5.56vw);
   }
 }
 
 .campaign__swiper-button-prev.swiper-button-prev::after {
   @include mq(md) {
-    background-image: url(../images/common/prev.jpg);
-    right: -75.66vw;
+    background-image: url(../images/common/prev.png);
+    right: calc(50% + min(-75.66vw, rem(-300)));
   }
 }
 
 .campaign__swiper-button-next.swiper-button-next::after {
   @include mq(md) {
-    background-image: url(../images/common/next.jpg);
-    right: 11.82vw;
+    background-image: url(../images/common/next.png);
+    left: calc(50% - min(17.32vw, 28rem));
   }
 }

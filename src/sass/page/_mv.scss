@@ -16,15 +16,12 @@
   position: absolute;
   z-index: 100;
   top: 50%;
-  left: 53%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: $blue;
   text-align: center;
   opacity: 1;
   transition: color 0.3s ease, opacity 1s ease;
-  @include mq(md) {
-    left: 51.5%;
-  }
 }
 
 .mv__title-wrap.fade-out {
@@ -44,6 +41,7 @@
   font-weight: $normal;
   line-height: 1;
   letter-spacing: 0.53em;
+  text-indent: 0.53em;
   @include mq(md) {
     font-size: rem(80);
   }
@@ -54,12 +52,10 @@
   font-size: rem(20);
   font-weight: $normal;
   line-height: normal;
-  padding-right: rem(24);
   display: block;
   margin-top: rem(4);
   @include mq(md) {
     margin-top: rem(8.8);
-    padding-right: rem(44.8);
   }
 }
 

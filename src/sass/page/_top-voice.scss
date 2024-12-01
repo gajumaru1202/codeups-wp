@@ -1,11 +1,38 @@
 @use "global" as *;
 .top-voice {
-  padding-top: rem(88);
-  padding-bottom: rem(84.8);
+  margin-top: rem(78);
   @include mq(md) {
-    padding-top: rem(143.2);
-    padding-bottom: rem(144.8);
+    margin-top: rem(133.2);
     position: relative;
-    overflow: hidden;
+  }
+}
+
+.top-voice::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    width: min(rem(301), 20.9vw);
+    height: min(rem(138), 9.58vw);
+    top: rem(-119);
+    left: calc(50% - min(48vw, rem(620.8)));
+    background-image: url("../images/common/blue-fish--right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+.top-voice::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    width: min(rem(71), 4.93vw);
+    height: min(rem(162), 11.25vw);
+    bottom: rem(-61);
+    right: calc(50% - min(48vw, rem(539.2)));
+    background-image: url("../images/common/sea-horse.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
   }
 }

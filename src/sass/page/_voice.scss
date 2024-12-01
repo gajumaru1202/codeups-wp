@@ -8,46 +8,13 @@
     margin-top: rem(31.6);
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    position: relative;
-  }
-}
-
-.voice__cards::before {
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    width: clamp(rem(250), 20.9vw, rem(301));
-    height: clamp(rem(70), 9.58vw, rem(138));
-    top: clamp(rem(-216), -15.09vw, rem(-150));
-    left: clamp(rem(-80), -5.56vw, rem(-50));
-    background-image: url("../images/common/blue-fish--right.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-  }
-}
-
-.voice__cards::after {
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    width: clamp(rem(50), 4.93vw, rem(71));
-    height: clamp(rem(130), 11.18vw, rem(162));
-    bottom: clamp(rem(-205), -14.09vw, rem(-170));
-    right: 0;
-    background-image: url("../images/common/sea-horse.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
   }
 }
 
 .voice__button {
   text-align: center;
   margin-top: rem(41.6);
-  padding-right: 0.8vw;
   @include mq(md) {
     margin-top: rem(80);
-    padding-right: 0.3vw;
   }
 }

@@ -1,13 +1,29 @@
 @use "global" as *;
 .top-price {
+  margin-top: rem(74.8);
   background-color: $blue-bg;
   padding-top: rem(84.8);
-  padding-bottom: rem(84.8);
+  padding-bottom: rem(74.8);
   position: relative;
   @include mq(md) {
+    margin-top: rem(134.8);
     padding-top: rem(98.4);
-    padding-bottom: rem(103.2);
+    padding-bottom: rem(93.2);
     position: relative;
-    overflow: hidden;
+  }
+}
+
+.top-price::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    width: min(rem(437), 30.35vw);
+    height: min(rem(201), 13.96vw);
+    bottom: min(rem(60), 4.17vw);
+    left: calc(50% - min(48vw, rem(620.8)));
+    background-image: url("../images/common/blue-fish--left.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
   }
 }

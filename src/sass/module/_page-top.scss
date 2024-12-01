@@ -15,3 +15,9 @@
     height: rem(80);
   }
 }
+
+@media (any-hover: hover) {
+  .page-top-button:hover {
+    opacity: 0.7;
+  }
+}

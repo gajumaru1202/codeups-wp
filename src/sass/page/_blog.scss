@@ -14,31 +14,13 @@
     margin-top: rem(81.6);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    position: relative;
-  }
-}
-
-.blog__cards::after {
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    width: clamp(rem(300), 30.35vw, rem(437));
-    height: clamp(rem(100), 13.96vw, rem(201));
-    top: clamp(rem(-221), -15.35vw, rem(-100));
-    left: clamp(rem(-81), -5.63vw, rem(-50));
-    background-image: url("../images/common/white-fish.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
   }
 }
 
 .blog__button {
   margin-top: rem(43.2);
   text-align: center;
-  padding-right: 0.8vw;
   @include mq(md) {
     margin-top: rem(81.6);
-    padding-right: 0.4vw;
   }
 }

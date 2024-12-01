@@ -18,15 +18,16 @@
   position: absolute;
   z-index: 100;
   top: 50%;
-  left: 53%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: $white;
   opacity: 0;
   transition: opacity 1s ease;
   text-align: center;
-  @include mq(md) {
-    left: 51.5%;
-  }
+}
+
+.mv-loading__main-title {
+  display: block;
 }
 
 .mv-loading__title.show {
