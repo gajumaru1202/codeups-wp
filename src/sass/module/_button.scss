@@ -6,6 +6,7 @@
   position: relative;
   display: inline-block;
   z-index: 10;
+  margin-bottom: rem(10);
 }
 
 .button::after {
@@ -21,8 +22,10 @@
   transition: transform 0.3s;
 }
 
-.button:hover .button__bg-white::before {
-  left: 0;
+@media (any-hover: hover) {
+  .button:hover .button__bg-white::before {
+    left: 0;
+  }
 }
 
 .button__bg-white {
@@ -60,9 +63,11 @@
   z-index: 1;
 }
 
-.button:hover .button__link {
-  color: $blue;
-  border-color: $blue;
+@media (any-hover: hover) {
+  .button:hover .button__link {
+    color: $blue;
+    border-color: $blue;
+  }
 }
 
 .button__link::before {
@@ -77,8 +82,10 @@
   transition: background-color 0.3s ease;
 }
 
-.button:hover .button__link::before {
-  background-color: $blue;
+@media (any-hover: hover) {
+  .button:hover .button__link::before {
+    background-color: $blue;
+  }
 }
 
 .button__link::after {
@@ -96,6 +103,8 @@
   transition: border-color 0.3s ease;
 }
 
-.button:hover .button__link::after {
-  border-color: $blue;
+@media (any-hover: hover) {
+  .button:hover .button__link::after {
+    border-color: $blue;
+  }
 }

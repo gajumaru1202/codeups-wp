@@ -4,6 +4,7 @@ jQuery(function ($) {
   $(".js-hamburger").click(function () {
     $(this).toggleClass("is-active");
     $(".js-drawer").toggleClass("is-active");
+    $(".js-header").toggleClass("is-active");
     $("body").toggleClass("is-scroll");
 
     if ($(this).hasClass("is-active")) {
@@ -32,6 +33,7 @@ jQuery(function ($) {
   $(".js-drawer a[href]").on("click", function () {
     $(".js-hamburger").removeClass("is-active");
     $(".js-drawer").removeClass("is-active");
+    $(".js-header").removeClass("is-active");
     $("body").removeClass("is-scroll");
     unlockFocus();
   });
@@ -40,6 +42,7 @@ jQuery(function ($) {
     if (window.matchMedia("(min-width: 768px)").matches) {
       $(".js-hamburger").removeClass("is-active");
       $(".js-drawer").removeClass("is-active");
+      $(".js-header").removeClass("is-active");
       $("body").removeClass("is-scroll");
       unlockFocus();
     }
@@ -51,6 +54,7 @@ jQuery(function ($) {
       if ($(".js-drawer").hasClass("is-active")) {
         $(".js-hamburger").removeClass("is-active");
         $(".js-drawer").removeClass("is-active");
+        $(".js-header").removeClass("is-active");
         $("body").removeClass("is-scroll");
         unlockFocus();
       }

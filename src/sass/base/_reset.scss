@@ -117,6 +117,8 @@ a {
   transition: opacity 0.3s;
 }
 
-a:hover {
-  opacity: 0.7;
+@media (any-hover: hover) {
+  a:hover {
+    opacity: 0.7;
+  }
 }

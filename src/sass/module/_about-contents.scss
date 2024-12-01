@@ -93,10 +93,7 @@
 .about-contents__button {
   margin-top: rem(50);
   text-align: center;
-  padding-right: 4.53vw;
   @include mq(md) {
     margin-top: rem(40);
-    padding-right: 0;
-    padding-left: rem(10);
   }
 }
