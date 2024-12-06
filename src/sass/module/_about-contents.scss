@@ -1,4 +1,10 @@
 @use "global" as *;
+.about-contents {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
 .about-contents__visual-wrap {
   display: flex;
   justify-content: right;
@@ -38,6 +44,16 @@
   }
 }
 
+.about-contents__body {
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: 0;
+    display: flex;
+    position: absolute;
+    top: rem(104);
+  }
+}
+
 .about-contents__title {
   text-align: left;
   margin-top: rem(41.6);
@@ -47,7 +63,7 @@
   font-weight: $normal;
   line-height: 1;
   @include mq(md) {
-    margin-top: rem(-460.8);
+    margin-top: rem(16);
     margin-left: rem(200);
     font-size: rem(80);
     color: $white;
@@ -57,18 +73,9 @@
   }
 }
 
-.about-contents__body {
-  margin-top: rem(16);
-  @include mq(md) {
-    margin-top: 0;
-    display: flex;
-  }
-}
-
 .about-contents__info-wrapper {
   margin-top: rem(16);
   @include mq(md) {
-    margin-top: rem(-460.8);
     margin-right: rem(56);
     z-index: 500;
     width: calc(100% - rem(312));

@@ -16,8 +16,28 @@
   }
 }
 
-.hamburger.is-active {
-  right: rem(10);
+.hamburger.is-active .hamburger__item:first-child {
+  width: 130%;
+  left: rem(-4.8);
+  top: rem(-9.6);
+  -webkit-transform: translateY(20px) rotate(37deg);
+  transform: translateY(20px) rotate(37deg);
+}
+
+.hamburger.is-active .hamburger__item:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active .hamburger__item:last-child {
+  top: rem(30.4);
+  left: rem(-4.8);
+  width: 130%;
+  -webkit-transform: translateY(-20px) rotate(-37deg);
+  transform: translateY(-20px) rotate(-37deg);
+}
+
+.hamburger:focus {
+  opacity: 0.5;
 }
 
 .hamburger__item {

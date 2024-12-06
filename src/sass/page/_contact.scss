@@ -1,7 +1,6 @@
 @use "global" as *;
 .contact {
   position: relative;
-  // overflow: hidden;
 }
 
 .contact__inner.inner {
@@ -18,7 +17,6 @@
     display: flex;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     padding: rem(81.6) rem(50) rem(75.2) rem(50);
-    margin-block: rem(10);
     gap: min(rem(82), 5.69vw);
   }
 }
