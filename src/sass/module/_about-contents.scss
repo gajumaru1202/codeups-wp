@@ -13,19 +13,14 @@
 
 .about-contents__visual-scenery {
   position: absolute;
+  width: 34.13vw;
+  max-width: rem(202);
   top: rem(-26);
   right: 63.33%;
   @include mq(md) {
     top: rem(-80);
     right: rem(680);
-  }
-}
-
-.about-contents__visual-scenery img {
-  width: 34.13vw;
-  max-width: rem(202);
-  @include mq(md) {
-    width: 25rem;
+    width: auto;
     max-width: 100%;
   }
 }
@@ -33,9 +28,6 @@
 .about__visual-underwater {
   display: flex;
   justify-content: right;
-}
-
-.about__visual-underwater img {
   width: 74.93vw;
   max-width: rem(443);
   @include mq(md) {
