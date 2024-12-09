@@ -1,16 +1,12 @@
 @use "global" as *;
 
 .campaign-card {
-  max-width: rem(280);
   width: 100%;
   height: calc(100% - rem(10));
   background-color: $white;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  @include mq(md) {
-    max-width: rem(333);
-  }
 }
 
 .campaign-card__img {
@@ -33,10 +29,10 @@
   flex: 1;
   padding-inline: rem(16);
   padding-top: rem(16);
-  padding-bottom: rem(24);
+  padding-bottom: rem(35.2);
   @include mq(md) {
     padding-top: rem(24);
-    padding-bottom: rem(43.2);
+    padding-bottom: rem(52);
   }
 }
 

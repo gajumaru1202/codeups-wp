@@ -1,0 +1,35 @@
+@use "global" as *;
+.mv-title {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mv-title__main {
+  display: block;
+  font-family: $large-font;
+  text-transform: uppercase;
+  font-size: rem(40);
+  font-weight: $normal;
+  line-height: 1;
+  letter-spacing: 0.53em;
+  text-indent: 0.53em;
+  @include mq(md) {
+    font-size: rem(80);
+  }
+}
+
+.mv-title__sub {
+  font-family: $english-font;
+  font-size: rem(20);
+  font-weight: $normal;
+  line-height: normal;
+  display: block;
+  margin-top: rem(4);
+  @include mq(md) {
+    margin-top: rem(8.8);
+  }
+}

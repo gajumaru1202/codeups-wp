@@ -13,26 +13,21 @@
 
 .about-contents__visual-scenery {
   position: absolute;
-  width: 34.13vw;
-  max-width: rem(202);
+  width: 37.3%;
   top: rem(-26);
-  right: 63.33%;
+  left: 0;
   @include mq(md) {
     top: rem(-80);
-    right: rem(680);
-    width: auto;
-    max-width: 100%;
+    width: 37%;
   }
 }
 
-.about__visual-underwater {
+.about-contents__visual-underwater {
   display: flex;
   justify-content: right;
-  width: 74.93vw;
-  max-width: rem(443);
+  width: 82%;
   @include mq(md) {
-    width: rem(880);
-    max-width: 100%;
+    width: 81.5%;
   }
 }
 

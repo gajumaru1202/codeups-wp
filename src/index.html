@@ -32,6 +32,7 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer
@@ -42,7 +43,6 @@
     https://cdn.jsdelivr.net/npm/jquery-inview@1.1.2/jquery.inview.min.js
     "
     ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
@@ -223,14 +223,14 @@
       <!-- mv -->
       <section class="top-mv mv js-mv">
         <div class="mv__inner">
-          <div class="mv__title-wrap js-mv-title">
-            <h1 class="mv__main-title">diving</h1>
-            <span class="mv__sub-title">into the ocean</span>
+          <div class="mv__title-wrap mv-title js-mv-title">
+            <h1 class="mv-title__main">diving</h1>
+            <span class="mv-title__sub">into the ocean</span>
           </div>
 
           <div class="mv__loading mv-loading js-loading-image">
             <div class="mv-loading__image-wrap">
-              <div class="mv-loading__image--left">
+              <div class="mv-loading__image-left">
                 <picture>
                   <source
                     media="(min-width: 768px)"
@@ -242,7 +242,7 @@
                   />
                 </picture>
               </div>
-              <div class="mv-loading__image--right">
+              <div class="mv-loading__image-right">
                 <picture>
                   <source
                     media="(min-width: 768px)"
@@ -255,11 +255,9 @@
                 </picture>
               </div>
             </div>
-            <div class="mv-loading__title js-loading-title">
-              <span class="mv-loading__main-title mv__main-title">diving</span>
-              <span class="mv-loading__sub-title mv__sub-title"
-                >into the ocean</span
-              >
+            <div class="mv-loading__title mv-title js-loading-title">
+              <span class="mv-title__main">diving</span>
+              <span class="mv-title__sub">into the ocean</span>
             </div>
           </div>
 
@@ -328,10 +326,10 @@
             </div>
           </div>
           <div class="campaign__cards campaign-cards">
-            <div class="campaign__slider swiper js-campaign-slider">
-              <div class="campaign__swiper-wrapper swiper-wrapper">
-                <div class="campaign__swiper-slide swiper-slide">
-                  <a href="#" class="campaign__card campaign-card">
+            <div class="campaign-cards__slider swiper js-campaign-slider">
+              <div class="campaign-cards__swiper-wrapper swiper-wrapper">
+                <div class="campaign-cards__swiper-slide swiper-slide">
+                  <a href="#" class="campaign-cards__item campaign-card">
                     <div class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign1.jpg"
@@ -360,8 +358,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="campaign__swiper-slide swiper-slide">
-                  <a href="#" class="campaign__card campaign-card">
+                <div class="campaign-cards__swiper-slide swiper-slide">
+                  <a href="#" class="campaign-cards__item campaign-card">
                     <div class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign2.jpg"
@@ -392,8 +390,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="campaign__swiper-slide swiper-slide">
-                  <a href="#" class="campaign__card campaign-card">
+                <div class="campaign-cards__swiper-slide swiper-slide">
+                  <a href="#" class="campaign-cards__item campaign-card">
                     <div class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign3.jpg"
@@ -424,8 +422,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="campaign__swiper-slide swiper-slide">
-                  <a href="#" class="campaign__card campaign-card">
+                <div class="campaign-cards__swiper-slide swiper-slide">
+                  <a href="#" class="campaign-cards__item campaign-card">
                     <div class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign4.jpg"
@@ -456,8 +454,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="campaign__swiper-slide swiper-slide">
-                  <a href="#" class="campaign__card campaign-card">
+                <div class="campaign-cards__swiper-slide swiper-slide">
+                  <a href="#" class="campaign-cards__item campaign-card">
                     <div class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign1.jpg"
@@ -486,8 +484,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="campaign__swiper-slide swiper-slide">
-                  <a href="#" class="campaign__card campaign-card">
+                <div class="campaign-cards__swiper-slide swiper-slide">
+                  <a href="#" class="campaign-cards__item campaign-card">
                     <div class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign2.jpg"
@@ -518,8 +516,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="campaign__swiper-slide swiper-slide">
-                  <a href="#" class="campaign__card campaign-card">
+                <div class="campaign-cards__swiper-slide swiper-slide">
+                  <a href="#" class="campaign-cards__item campaign-card">
                     <div class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign3.jpg"
@@ -550,8 +548,8 @@
                     </div>
                   </a>
                 </div>
-                <div class="campaign__swiper-slide swiper-slide">
-                  <a href="#" class="campaign__card campaign-card">
+                <div class="campaign-cards__swiper-slide swiper-slide">
+                  <a href="#" class="campaign-cards__item campaign-card">
                     <div class="campaign-card__img">
                       <img
                         src="./assets/images/common/campaign4.jpg"
@@ -584,8 +582,12 @@
                 </div>
               </div>
             </div>
-            <div class="campaign__swiper-button-prev swiper-button-prev"></div>
-            <div class="campaign__swiper-button-next swiper-button-next"></div>
+            <div
+              class="campaign-cards__swiper-button-prev swiper-button-prev"
+            ></div>
+            <div
+              class="campaign-cards__swiper-button-next swiper-button-next"
+            ></div>
           </div>
           <div class="campaign__button">
             <div class="button">
@@ -619,7 +621,7 @@
                   />
                 </picture>
               </div>
-              <div class="about__visual-underwater">
+              <div class="about-contents__visual-underwater">
                 <picture>
                   <source
                     media="(min-width: 768px)"
@@ -662,7 +664,7 @@
           </div>
           <div class="information__content">
             <div class="information__color-box color-box js-color-box">
-              <div class="information__img color-box__img">
+              <div class="information__img">
                 <img
                   src="./assets/images/common/information.jpg"
                   alt="珊瑚礁で黄色い熱帯魚が泳いでいる様子"
@@ -700,7 +702,7 @@
             </div>
           </div>
           <div class="blog__cards blog-cards">
-            <a href="#" class="blog__card blog-card">
+            <a href="#" class="blog-cards__item blog-card">
               <div class="blog-card__img">
                 <img
                   src="./assets/images/common/blog-card1.jpg"
@@ -720,7 +722,7 @@
                 </p>
               </div>
             </a>
-            <a href="#" class="blog__card blog-card">
+            <a href="#" class="blog-cards__item blog-card">
               <div class="blog-card__img">
                 <img
                   src="./assets/images/common/blog-card2.jpg"
@@ -740,7 +742,7 @@
                 </p>
               </div>
             </a>
-            <a href="#" class="blog__card blog-card">
+            <a href="#" class="blog-cards__item blog-card">
               <div class="blog-card__img">
                 <img
                   src="./assets/images/common/blog-card3.jpg"
@@ -780,7 +782,7 @@
             </div>
           </div>
           <div class="voice__cards voice-cards">
-            <a href="#" class="voice__card voice-card">
+            <a href="#" class="voice-cards__item voice-card">
               <div class="voice-card__info">
                 <div class="voice-card__profile">
                   <div class="voice-card__meta">
@@ -794,7 +796,7 @@
                   </p>
                 </div>
                 <div class="voice-card__color-box color-box js-color-box">
-                  <div class="voice-card__img color-box__img">
+                  <div class="voice-card__img">
                     <img
                       src="./assets/images/common/voice-card1.jpg"
                       alt="麦わら帽子を被った20代女性の顔写真"
@@ -810,7 +812,7 @@
                 </p>
               </div>
             </a>
-            <a href="#" class="voice__card voice-card">
+            <a href="#" class="voice-cards__item voice-card">
               <div class="voice-card__info">
                 <div class="voice-card__profile">
                   <div class="voice-card__meta">
@@ -824,7 +826,7 @@
                   </p>
                 </div>
                 <div class="voice-card__color-box color-box js-color-box">
-                  <div class="voice-card__img color-box__img">
+                  <div class="voice-card__img">
                     <img
                       src="./assets/images/common/voice-card2.jpg"
                       alt="紺色のシャツを着た30代男性がグットサインをしている写真"
@@ -862,7 +864,7 @@
 
           <div class="price__content">
             <div class="price__color-box color-box js-color-box">
-              <div class="price__img color-box__img">
+              <div class="price__img">
                 <picture>
                   <source
                     media="(min-width: 500px)"
@@ -1030,7 +1032,7 @@
               <div class="contact__heading">
                 <div class="section-heading">
                   <h2
-                    class="section-heading__main section-heading__main--large"
+                    class="section-heading__main section-heading__main--contact"
                   >
                     Contact
                   </h2>

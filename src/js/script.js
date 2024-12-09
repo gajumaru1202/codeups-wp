@@ -135,32 +135,39 @@ $(document).ready(function () {
   });
 });
 
+// メインビジュアル
 $(document).ready(function () {
   $("body").addClass("no-scroll");
 
   setTimeout(function () {
     $(".js-mv-title").addClass("fade-out");
-  }, 1500);
+  }, 250);
 
   setTimeout(function () {
     $(".js-loading-image").addClass("show");
-  }, 2500);
+  }, 450);
 
   setTimeout(function () {
     $(".js-loading-title").addClass("show");
-  }, 7000);
+  }, 3000);
 
   setTimeout(function () {
     $(".js-mv-title").removeClass("fade-out").addClass("change-color");
-  }, 8500);
+  }, 3000);
 
   setTimeout(function () {
     $(".js-mv-slider").addClass("show");
-  }, 8500);
+  }, 3000);
 
   setTimeout(function () {
     $(".js-loading-image").addClass("fade-out");
-  }, 8500);
+  }, 5000);
+
+  $("body").addClass("no-scroll");
+
+  setTimeout(function () {
+    $("body").removeClass("no-scroll");
+  }, 3000);
 
   setTimeout(function () {
     new Swiper(".js-mv-slider", {
@@ -172,8 +179,7 @@ $(document).ready(function () {
         delay: 3500,
       },
     });
-    $("body").removeClass("no-scroll");
-  }, 10500);
+  }, 7000);
 });
 
 // キャンペーンセクション
