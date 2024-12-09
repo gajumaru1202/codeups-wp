@@ -23,9 +23,6 @@
 
 .footer__logo {
   display: block;
-}
-
-.footer__logo img {
   max-width: rem(120);
   width: 100%;
   @include mq(md) {

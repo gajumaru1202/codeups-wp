@@ -72,20 +72,18 @@
 
 .voice-card__img {
   aspect-ratio: 151 / 117;
+  min-width: rem(151);
   flex-shrink: 0;
   @include mq(md) {
     aspect-ratio: 180 / 140;
+    min-width: rem(180);
   }
 }
 
 .voice-card__img img {
-  min-width: rem(151);
   width: 100%;
   height: 100%;
   object-fit: cover;
-  @include mq(md) {
-    min-width: rem(180);
-  }
 }
 
 .voice-card__title {
