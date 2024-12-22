@@ -1,0 +1,31 @@
+@use "global" as *;
+.breadcrumb__list {
+  display: flex;
+  gap: rem(20);
+}
+
+.breadcrumb__item {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1;
+  margin-top: 11px;
+}
+
+.breadcrumb__item:not(:first-child) {
+  position: relative;
+}
+
+.breadcrumb__item:not(:first-child)::after {
+  position: absolute;
+  content: "";
+  top: rem(4);
+  left: rem(-15);
+  width: rem(7);
+  height: rem(7);
+  border-top: 1px solid $black;
+  border-right: 1px solid $black;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

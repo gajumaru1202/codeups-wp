@@ -34,12 +34,26 @@
   }
 }
 
+.campaign-card__content.campaign-card__content--details {
+  padding-bottom: rem(24);
+  @include mq(md) {
+    padding-inline: rem(24);
+    padding-bottom: rem(33.6);
+  }
+}
+
 .campaign-card__badge {
   flex: 1;
   padding-bottom: rem(6.4);
   border-bottom: 1px solid $blue;
   @include mq(md) {
     padding-bottom: rem(7.2);
+  }
+}
+
+.campaign-card__badge.campaign-card__badge--details {
+  @include mq(md) {
+    padding-bottom: rem(4);
   }
 }
 
@@ -62,6 +76,12 @@
   }
 }
 
+.campaign-card__badge-label.campaign-card__badge-label--details span {
+  @include mq(md) {
+    padding: rem(9.28) rem(15.04);
+  }
+}
+
 .campaign-card__badge-title {
   color: $black;
   margin-top: rem(4.8);
@@ -70,6 +90,12 @@
   line-height: 1.5;
   @include mq(md) {
     margin-top: rem(3.2);
+  }
+}
+
+.campaign-card__badge-title.campaign-card__badge-title--details {
+  @include mq(md) {
+    font-size: rem(24);
   }
 }
 
@@ -83,7 +109,12 @@
   @include mq(md) {
     font-size: 1rem;
     margin-top: rem(14.4);
-    padding-right: 1.11vw;
+  }
+}
+
+.campaign-card__description.campaign-card__description--details {
+  @include mq(md) {
+    margin-top: rem(20.8);
   }
 }
 
@@ -96,6 +127,13 @@
   @include mq(md) {
     margin-top: rem(3.2);
     gap: rem(25.6);
+  }
+}
+
+.campaign-card__price.campaign-card__price--details {
+  @include mq(md) {
+    margin-top: rem(6.4);
+    gap: rem(42.4);
   }
 }
 
@@ -131,4 +169,61 @@
   @include mq(md) {
     font-size: rem(40);
   }
+}
+
+.campaign-card__details-content {
+  margin-top: rem(24);
+}
+
+.campaign-card__details-text {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.campaign-card__date-wrap {
+  position: relative;
+  margin-top: rem(33.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(5);
+}
+
+.campaign-card__date-wrap::after {
+  position: absolute;
+  content: "";
+  background: $blue;
+  width: rem(5);
+  height: rem(1);
+  top: 54%;
+  left: 53.8%;
+  transform: translate(-50%, -50%);
+}
+
+.campaign-card__date {
+  color: $blue;
+  font-family: $large-font;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.campaign-card__details-message {
+  display: block;
+  margin-top: rem(10);
+  color: $blue;
+  text-align: center;
+  font-family: $japanese-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1;
+}
+
+.campaign-card__details-button {
+  text-align: center;
+  margin-top: rem(19);
 }

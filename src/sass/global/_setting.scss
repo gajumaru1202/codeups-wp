@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "breakpoints" as *;
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
 $inner: 1080px;
@@ -45,3 +46,19 @@ $black: #0d2936;
 $white: #fff;
 $blue: #408f95;
 $blue-bg: #ddf0f1;
+
+// spのみ表示
+.pc-hidden {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+// pcのみ表示
+.sp-hidden {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
