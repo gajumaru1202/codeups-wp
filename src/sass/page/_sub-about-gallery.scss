@@ -1,0 +1,23 @@
+@use "global" as *;
+.sub-about-gallery {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(120);
+    position: relative;
+  }
+}
+
+.sub-about-gallery::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    background-image: url("../images/common/blue-fish--left.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    width: min(rem(301), 20.9vw);
+    height: min(rem(138), 9.58vw);
+    top: rem(-80);
+    right: calc(50% - min(44.5vw, rem(640)));
+  }
+}
