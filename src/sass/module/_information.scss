@@ -15,7 +15,7 @@
   }
 }
 
-.information__img {
+.information__image {
   aspect-ratio: 345 /227;
   flex-shrink: 0;
   @include mq(md) {
@@ -24,7 +24,7 @@
   }
 }
 
-.information__img img {
+.information__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
