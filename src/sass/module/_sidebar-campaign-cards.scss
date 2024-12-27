@@ -1,0 +1,6 @@
+@use "global" as *;
+.sidebar-campaign-cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(39);
+}

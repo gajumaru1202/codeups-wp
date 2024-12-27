@@ -1,0 +1,39 @@
+@use "global" as *;
+.sidebar-voice-card__image {
+  aspect-ratio: 294 / 218;
+}
+
+.sidebar-voice-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-voice-card__content {
+  margin-top: rem(12);
+}
+
+.sidebar-voice-card__age {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.sidebar-voice-card__title {
+  margin-top: rem(8);
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: normal;
+}
+
+.sidebar-voice-card__button {
+  text-align: center;
+  margin-top: rem(38);
+  @include mq(md) {
+    margin-top: rem(41);
+  }
+}

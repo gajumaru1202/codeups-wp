@@ -1,0 +1,26 @@
+@use "global" as *;
+.sidebar-title {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(24);
+  font-weight: $normal;
+  line-height: normal;
+  padding-left: rem(74);
+  padding-top: rem(10);
+  padding-bottom: rem(5);
+  border-left: 8px solid $blue;
+  position: relative;
+}
+
+.sidebar-title::before {
+  position: absolute;
+  content: "";
+  background-image: url("../images/common/sidebar-title-logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(50);
+  height: rem(50);
+  top: 50%;
+  left: rem(16);
+  transform: translateY(-50%);
+}
