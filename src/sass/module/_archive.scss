@@ -1,0 +1,84 @@
+@use "global" as *;
+.archive {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+}
+
+.archive__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+}
+
+.archive__main-toggle {
+  padding-left: rem(32);
+  padding-block: 0;
+  padding-right: 0;
+  color: $blue;
+  font-family: $japanese-font;
+  font-size: rem(24);
+  font-weight: $normal;
+  line-height: normal;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.archive__main-toggle:hover {
+  opacity: 0.7;
+}
+
+.archive__main-toggle::before {
+  position: absolute;
+  content: "";
+  top: rem(9);
+  left: rem(2);
+  display: inline-block;
+  border-style: solid;
+  border-width: 0.5em 0 0.5em 0.865em;
+  border-color: transparent transparent transparent $blue;
+  transform: translateY(0.1em) scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.archive__main-toggle.is-expanded::before {
+  transform: rotate(90deg);
+}
+
+.archive__toggle-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(3);
+  gap: rem(5);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.archive__toggle-list.is-visible {
+  max-height: rem(500);
+}
+
+.archive__sub-toggle {
+  color: $blue;
+  font-family: $japanese-font;
+  font-size: rem(24);
+  font-weight: $normal;
+  line-height: normal;
+  margin-left: rem(24);
+  padding-left: rem(32);
+  position: relative;
+}
+
+.archive__sub-toggle::before {
+  position: absolute;
+  content: "";
+  top: rem(3);
+  left: rem(4);
+  display: inline-block;
+  border-style: solid;
+  border-width: 0.5em 0 0.5em 0.865em;
+  border-color: transparent transparent transparent $blue;
+  transform: translateY(0.1em) scale(0.8);
+}

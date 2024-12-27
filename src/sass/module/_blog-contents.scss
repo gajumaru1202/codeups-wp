@@ -1,0 +1,22 @@
+@use "global" as *;
+.blog-contents__inner {
+  @include mq(md) {
+    display: flex;
+    gap: clamp(rem(30), 5.56vw, rem(80));
+  }
+}
+
+.blog-contents__featured {
+  padding-inline: rem(6);
+}
+
+.blog-contents__pagination {
+  margin-top: rem(80);
+}
+
+.blog-contents__sidebar-wrap {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}

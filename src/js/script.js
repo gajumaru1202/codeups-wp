@@ -313,3 +313,23 @@ $(function () {
     tabContent.eq(index).addClass("is-active");
   });
 });
+
+// トグルリスト
+$(document).ready(function () {
+  $(".archive__main-toggle").on("click", function () {
+    const targetId = $(this).data("target");
+    const $targetList = $("#" + targetId);
+
+    if ($targetList.length) {
+      if ($targetList.hasClass("is-visible")) {
+        $targetList.removeClass("is-visible").css("max-height", 0);
+      } else {
+        $targetList
+          .addClass("is-visible")
+          .css("max-height", $targetList.prop("scrollHeight") + "px");
+      }
+
+      $(this).toggleClass("is-expanded");
+    }
+  });
+});
