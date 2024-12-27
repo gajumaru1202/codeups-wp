@@ -262,3 +262,54 @@ box.each(function () {
     }
   });
 });
+
+// モーダル
+$(document).ready(function () {
+  $(".js-modal-open").on("click", function (e) {
+    e.preventDefault();
+
+    const imgSrc = $(this).find("img").attr("src");
+    const imgAlt = $(this).find("img").attr("alt");
+
+    const imgElement = $("<img>", {
+      src: imgSrc,
+      alt: imgAlt,
+      class: "modal__image",
+    });
+    $(".js-modal").append(imgElement);
+
+    $(".js-modal").fadeIn();
+    $("body").addClass("no-scroll");
+  });
+
+  $(".js-modal").on("click", function () {
+    closeModal();
+  });
+
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape" || e.keyCode === 27) {
+      closeModal();
+    }
+  });
+
+  function closeModal() {
+    $(".js-modal").fadeOut(function () {
+      $(this).empty();
+    });
+    $("body").removeClass("no-scroll");
+  }
+});
+
+// タブ切り替え
+$(function () {
+  const tabButton = $(".js-tab-button"),
+    tabContent = $(".js-tab-content");
+  tabButton.on("click", function () {
+    let index = tabButton.index(this);
+
+    tabButton.removeClass("is-active");
+    $(this).addClass("is-active");
+    tabContent.removeClass("is-active");
+    tabContent.eq(index).addClass("is-active");
+  });
+});
