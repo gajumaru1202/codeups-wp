@@ -250,7 +250,7 @@
       </div>
 
       <!-- ブログコンテンツ -->
-      <section class="blog-contents sub-blog-contents">
+      <section class="blog-contents sub-blog">
         <div class="blog-contents__inner inner">
           <div class="blog-contents__featured">
             <div class="blog-contents__card-wrap blog-contents-cards">
@@ -636,7 +636,7 @@
                           class="campaign-card__badge campaign-card__badge--sidebar"
                         >
                           <p
-                            class="campaign-card__badge-title campaign-card__badge-title"
+                            class="campaign-card__badge-title campaign-card__badge-title--sidebar"
                           >
                             ライセンス取得
                           </p>
@@ -679,7 +679,7 @@
                           class="campaign-card__badge campaign-card__badge--sidebar"
                         >
                           <p
-                            class="campaign-card__badge-title campaign-card__badge-title"
+                            class="campaign-card__badge-title campaign-card__badge-title--sidebar"
                           >
                             貸切体験ダイビング
                           </p>
@@ -723,10 +723,13 @@
                   <div class="archive">
                     <ul class="archive__list">
                       <li class="archive__item">
-                        <button class="archive__main-toggle" data-target="2023">
+                        <button
+                          class="archive__main-toggle is-expanded"
+                          data-target="2023"
+                        >
                           2023
                         </button>
-                        <ul class="archive__toggle-list" id="2023">
+                        <ul class="archive__toggle-list is-visible" id="2023">
                           <li class="archive__subitem">
                             <a href="#" class="archive__sub-toggle">3月</a>
                           </li>
