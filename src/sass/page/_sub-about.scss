@@ -1,13 +1,13 @@
 @use "global" as *;
-.sub-blog-contents {
+.sub-about {
   margin-top: rem(55);
   position: relative;
   @include mq(md) {
-    margin-top: rem(153);
+    margin-top: rem(232);
   }
 }
 
-.sub-blog-contents::after {
+.sub-about::after {
   content: "";
   position: absolute;
   width: min(rem(120), 32vw);
@@ -21,7 +21,7 @@
   @include mq(md) {
     width: min(rem(301), 20.9vw);
     height: min(rem(138), 9.58vw);
-    top: rem(-70);
+    top: rem(-150);
     left: calc(50% - min(48vw, rem(620.8)));
   }
 }
