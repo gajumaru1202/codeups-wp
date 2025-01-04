@@ -1,0 +1,97 @@
+@use "global" as *;
+.price-table {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.price-table__header {
+  text-align: center;
+  color: $white;
+  font-family: $japanese-font;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  width: 100%;
+  background-color: $blue;
+  padding-block: rem(8);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: rem(8);
+  @include mq(md) {
+    width: 100%;
+    max-width: rem(200);
+    padding-block: 0;
+    flex-direction: column;
+  }
+}
+
+.price-table__header-logo {
+  width: rem(24);
+  height: rem(24);
+  filter: invert(100%) sepia(0%) saturate(1912%) hue-rotate(152deg)
+    brightness(121%) contrast(100%);
+  @include mq(md) {
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.price-table__list {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+.price-table__row {
+  width: 100%;
+  height: rem(64);
+  display: table-row;
+  @include mq(md) {
+    height: rem(59);
+  }
+}
+
+.price-table__name {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  text-align: center;
+  width: calc(rem(240) / rem(345) * 100%);
+  height: inherit;
+  @include mq(md) {
+    width: calc(rem(340) / rem(502) * 100%);
+    text-align: left;
+    padding-inline: rem(16);
+  }
+}
+
+.price-table__price {
+  text-align: right;
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  width: calc(rem(106) / rem(345) * 100%);
+  height: inherit;
+  padding-inline: rem(16);
+  @include mq(md) {
+    width: calc(rem(162) / rem(502) * 100%);
+  }
+}
+
+.price-table__name,
+.price-table__price {
+  border: 1px solid $blue;
+  display: table-cell;
+}
