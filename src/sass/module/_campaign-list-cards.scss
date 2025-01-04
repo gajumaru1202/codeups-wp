@@ -1,0 +1,12 @@
+@use "global" as *;
+.campaign-list-cards {
+  padding-inline: rem(32);
+  gap: rem(40);
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  @include mq(md) {
+    row-gap: rem(80);
+    padding-inline: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

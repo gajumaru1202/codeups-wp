@@ -316,20 +316,27 @@ $(function () {
 
 // トグルリスト
 $(document).ready(function () {
+  const $initialTargetList = $("#2023");
+  $initialTargetList
+    .addClass("is-visible")
+    .css("max-height", $initialTargetList.prop("scrollHeight") + "px");
+
   $(".archive__main-toggle").on("click", function () {
     const targetId = $(this).data("target");
     const $targetList = $("#" + targetId);
 
     if ($targetList.length) {
       if ($targetList.hasClass("is-visible")) {
+        // 閉じる処理
         $targetList.removeClass("is-visible").css("max-height", 0);
+        $(this).removeClass("is-expanded");
       } else {
+        // 開く処理
         $targetList
           .addClass("is-visible")
           .css("max-height", $targetList.prop("scrollHeight") + "px");
+        $(this).addClass("is-expanded");
       }
-
-      $(this).toggleClass("is-expanded");
     }
   });
 });

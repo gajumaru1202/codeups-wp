@@ -1,68 +1,8 @@
 @use "global" as *;
-.campaign-list__label-wrap {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: rem(20);
-  row-gap: rem(16);
-  @include mq(md) {
-    display: flex;
-    gap: rem(32);
-  }
-}
-
-.campaign-list__label-item {
-  padding: rem(9) rem(10);
-  border: 1px solid $blue;
-  transition: color 0.3s;
-  @include mq(md) {
-    width: rem(162);
-    padding: rem(10);
-  }
-}
-
-.campaign-list__label-item.is-active {
-  background-color: $blue;
-}
-
-.campaign-list__label-item:hover {
-  @media (any-hover: hover) {
-    background-color: $blue;
-  }
-}
-
-.campaign-list__label-link {
-  display: block;
-  text-align: center;
-  color: $blue;
-  font-family: $japanese-font;
-  font-size: rem(14);
-  font-weight: $normal;
-  line-height: 1;
-  transition: color opacity 0.3s;
-}
-
-.campaign-list__label-link.is-active {
-  color: $white;
-}
-
-.campaign-list__label-item:hover .campaign-list__label-link {
-  @media (any-hover: hover) {
-    color: $white;
-    opacity: 1;
-  }
-}
-
 .campaign-list__card-wrap {
   margin-top: rem(40);
-  padding-inline: rem(32);
-  gap: rem(40);
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
   @include mq(md) {
     margin-top: rem(38);
-    row-gap: rem(80);
-    padding-inline: 0;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

@@ -16,7 +16,8 @@
 
 .campaign-card__image.campaign-card__image--sidebar {
   aspect-ratio: 294 / 188;
-  min-height: rem(188);
+  width: 100%;
+  height: 100%;
 }
 
 .campaign-card__image img {
@@ -115,7 +116,7 @@
   }
 }
 
-.campaign-card__badge-title.campaign-card__badge-title {
+.campaign-card__badge-title.campaign-card__badge-title--sidebar {
   margin-top: 0;
 }
 
