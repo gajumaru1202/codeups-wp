@@ -24,6 +24,13 @@
   gap: rem(13);
 }
 
+.menu__items.menu__items--sitemap {
+  column-gap: rem(36.8);
+  @include mq(md) {
+    column-gap: rem(157.2);
+  }
+}
+
 .menu__item {
   display: block;
 }
@@ -57,6 +64,10 @@
   margin-left: rem(15.2);
 }
 
+.menu__link-wrap.menu__link-wrap--black {
+  color: $black;
+}
+
 .menu__link-main {
   position: relative;
   font-size: rem(16);
@@ -74,7 +85,7 @@
 .menu__link-main::before {
   content: "";
   position: absolute;
-  background-image: url(../images/common/drawer-logo.svg);
+  background-image: url(../images/common/menu-logo.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -82,6 +93,13 @@
   height: rem(18);
   top: rem(2);
   left: rem(-22);
+  filter: invert(100%) sepia(0%) saturate(7484%) hue-rotate(284deg)
+    brightness(105%) contrast(101%);
+}
+
+.menu__link-main.menu__link-main--black::before {
+  filter: invert(14%) sepia(60%) saturate(464%) hue-rotate(153deg)
+    brightness(96%) contrast(102%);
 }
 
 .menu__link-sub {
@@ -99,4 +117,11 @@
 .menu__link-sub a {
   display: block;
   width: 105%;
+}
+
+.menu__link-sub.menu__link-sub--sitemap a {
+  width: 110%;
+  @include mq(md) {
+    width: 112%;
+  }
 }

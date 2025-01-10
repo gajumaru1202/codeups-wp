@@ -1,0 +1,268 @@
+@use "global" as *;
+.form__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  @include mq(md) {
+    gap: rem(39);
+  }
+}
+
+.form__field:not(:last-child) {
+  padding-bottom: rem(24);
+  border-bottom: 1.5px dotted $blue;
+  @include mq(md) {
+    padding-bottom: rem(40);
+  }
+}
+
+.form__field:last-child {
+  margin-top: calc(rem(40) - rem(24));
+  @include mq(md) {
+    margin-top: calc(rem(80) - rem(40));
+  }
+}
+
+.form__field {
+  @include mq(md) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  @include mq(md) {
+    min-width: rem(220);
+  }
+}
+
+.form__label label {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: normal;
+}
+
+.form__tag {
+  padding: rem(2) rem(12) rem(2) rem(16);
+  background-color: #c94800;
+  color: $white;
+  font-family: $japanese-font;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: normal;
+  letter-spacing: 0.4em;
+}
+
+.form__data,
+.form__data-select,
+.form__data-check {
+  margin-top: rem(16);
+  width: 100%;
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.form__data-radio {
+  margin-top: rem(15);
+  width: 100%;
+  @include mq(md) {
+    margin-top: rem(1);
+  }
+}
+
+.form__data-textarea {
+  margin-top: rem(15);
+  width: 100%;
+  height: rem(200);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.form__data-privacy {
+  width: 100%;
+}
+
+.form__input::placeholder {
+  color: $blue-bg;
+  font-family: $japanese-font;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.form__textarea {
+  height: inherit;
+  resize: none;
+  overflow: auto;
+}
+
+.form__input,
+.form__textarea {
+  font-size: rem(14);
+  width: 100%;
+  padding: rem(8) rem(16);
+  border: 1px solid $blue;
+  @include mq(md) {
+    padding: rem(8.5) rem(16) rem(8.5) rem(16);
+  }
+}
+
+.form__select {
+  padding: rem(12.5) rem(30) rem(12.5) rem(7);
+  color: #000;
+  font-family: $japanese-font;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: normal;
+  width: 100%;
+  border: 1px solid $blue;
+  @include mq(md) {
+    padding-block: rem(8);
+  }
+}
+
+.form__data-select {
+  position: relative;
+  @include mq(md) {
+    margin-top: rem(-4);
+  }
+}
+
+.form__data-select::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 9px;
+  border: 5px solid transparent;
+  border-top: 8px solid $blue;
+  @include mq(md) {
+    top: 40%;
+  }
+}
+
+.form__data-radio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__radio {
+  display: flex;
+  flex-direction: column;
+  gap: rem(2.1);
+  align-items: baseline;
+  @include mq(md) {
+    gap: rem(3);
+  }
+}
+
+.wpcf7-list-item {
+  margin: 0;
+}
+
+.wpcf7-form-control-wrap[data-name="radio-category"] .wpcf7-list-item-label {
+  position: relative;
+  display: inline-block;
+  padding-left: rem(22);
+}
+
+.wpcf7-form-control-wrap[data-name="radio-category"]
+  .wpcf7-list-item-label::before {
+  position: absolute;
+  top: 53%;
+  left: 0;
+  width: rem(14);
+  height: rem(14);
+  content: "";
+  transform: translateY(-50%);
+  border: 2px solid $blue;
+}
+
+.wpcf7-form-control-wrap[data-name="radio-category"]
+  .wpcf7-list-item-label::after {
+  position: absolute;
+  top: 38%;
+  left: rem(3);
+  opacity: 0;
+  content: "";
+  width: rem(9);
+  height: rem(4);
+  border-left: 2px solid #c94800;
+  border-bottom: 2px solid #c94800;
+  transform: rotate(-35deg);
+}
+
+.wpcf7-form-control-wrap[data-name="radio-category"]
+  .wpcf7-list-item
+  input:checked
+  + .wpcf7-list-item-label::after {
+  opacity: 1;
+}
+
+.form__checkbox:checked + .wpcf7-list-item-label::after {
+  opacity: 1;
+}
+
+.wpcf7-list-item label {
+  display: flex;
+  justify-content: center;
+}
+
+.wpcf7-form-control-wrap[data-name="privacy"] .wpcf7-list-item-label {
+  position: relative;
+  padding-left: rem(60);
+  padding-right: rem(32);
+  text-align: start;
+  color: #000;
+  font-family: $japanese-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.57143;
+  @include mq(md) {
+    padding-left: rem(69);
+    padding-right: rem(30);
+  }
+}
+
+.wpcf7-form-control-wrap[data-name="privacy"] .wpcf7-list-item-label::before {
+  position: absolute;
+  content: "";
+  left: rem(32);
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid $blue;
+}
+
+.wpcf7-form-control-wrap[data-name="privacy"] .wpcf7-list-item-label::after {
+  position: absolute;
+  top: rem(6);
+  left: rem(38);
+  transform: translateY(-50%);
+  opacity: 0;
+  content: "";
+  width: rem(11);
+  height: rem(7);
+  border-left: 2px solid #c94800;
+  border-bottom: 2px solid #c94800;
+  transform: rotate(-45deg);
+  transition: opacity 0.3s;
+}
+
+.form__checkbox:checked + .wpcf7-list-item-label::after {
+  opacity: 1;
+}
+
+.form__submit-button {
+  margin-top: rem(24);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
