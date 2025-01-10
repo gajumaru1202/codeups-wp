@@ -218,21 +218,21 @@
     </header>
 
     <main>
-      <!-- インフォメーションmv -->
-      <section class="information-mv page-mv">
+      <!-- コンタクトmv -->
+      <section class="contact-mv page-mv">
         <div class="page-mv__inner">
           <div class="page-mv__title">
-            <h1 class="page-mv__main-title">Information</h1>
+            <h1 class="page-mv__main-title">Contact</h1>
           </div>
           <div class="page-mv__image">
             <picture>
               <source
                 media="(min-width: 768px)"
-                srcset="./assets/images/common/information-mv-pc.jpg"
+                srcset="./assets/images/common/contact-mv-pc.jpg"
               />
               <img
-                src="./assets/images/common/information-mv-sp.jpg"
-                alt="シーサーの写真"
+                src="./assets/images/common/contact-mv-sp.jpg"
+                alt="海面からダイバーのシュノーケルが見えている写真"
               />
             </picture>
           </div>
@@ -244,150 +244,184 @@
         <div class="breadcrumb__inner inner">
           <div class="breadcrumb__list">
             <p class="breadcrumb__item">TOP</p>
-            <p class="breadcrumb__item">ダイビング情報</p>
+            <p class="breadcrumb__item">お問い合わせ</p>
           </div>
         </div>
       </div>
 
-      <!-- インフォメーションコンテントセクション -->
-      <section class="information-content sub-information">
-        <div class="information-content__inner inner">
-          <div class="information-content__tab information-tab">
-            <div class="information-tab__list">
-              <button class="information-tab__button js-tab-button is-active">
-                ライセンス<br class="pc-hidden" />講習
-              </button>
-              <button class="information-tab__button js-tab-button">
-                ファン<br class="pc-hidden" />ダイビング
-              </button>
-              <button class="information-tab__button js-tab-button">
-                体験<br class="pc-hidden" />ダイビング
-              </button>
-            </div>
-
-            <div class="information-tab__contents">
-              <div class="information-tab__content js-tab-content is-active">
-                <div class="information-tab__text-wrap">
-                  <p class="information-tab__title">ライセンス講習</p>
-                  <p class="information-tab__description">
-                    泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
-                  </p>
-                </div>
-                <div class="information-tab__image">
-                  <picture>
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./assets/images/common/information-tab-pc1.jpg"
+      <!-- コンファームセクション -->
+      <section class="contact-confirm sub-contact-confirm">
+        <div class="contact-confirm__inner inner">
+          <div class="contact-confirm__form">
+            <div class="form">
+              <dl class="form__list">
+                <div class="form__field">
+                  <dt class="form__label">
+                    <label for="name">お名前</label>
+                    <span class="form__tag">必須</span>
+                  </dt>
+                  <dd class="form__data">
+                    <input
+                      type="text"
+                      id="your-name"
+                      name="your-name"
+                      class="form__input"
+                      placeholder="沖縄　太郎"
+                      required
                     />
-                    <img
-                      src="./assets/images/common/information-tab-sp1.jpg"
-                      alt="海亀が透き通った青い海を泳いでいる様子"
-                    />
-                  </picture>
+                  </dd>
                 </div>
-              </div>
-              <div class="information-tab__content js-tab-content">
-                <div class="information-tab__text-wrap">
-                  <p class="information-tab__title">ファンダイビング</p>
-                  <p class="information-tab__description">
-                    ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
-                  </p>
-                </div>
-                <div class="information-tab__image">
-                  <picture>
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./assets/images/common/information-tab-pc2.jpg"
+                <div class="form__field">
+                  <dt class="form__label">
+                    <label for="email">メールアドレス</label>
+                    <span class="form__tag">必須</span>
+                  </dt>
+                  <dd class="form__data">
+                    <input
+                      type="email"
+                      id="your-email"
+                      name="your-email"
+                      class="form__input"
+                      placeholder="aaa000@ggmail.com"
+                      required
                     />
-                    <img
-                      src="./assets/images/common/information-tab-sp2.jpg"
-                      alt="海亀が透き通った青い海を泳いでいる様子"
-                    />
-                  </picture>
+                  </dd>
                 </div>
-              </div>
-              <div class="information-tab__content js-tab-content">
-                <div class="information-tab__text-wrap">
-                  <p class="information-tab__title">体験ダイビング</p>
-                  <p class="information-tab__description">
-                    ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
-                  </p>
-                </div>
-                <div class="information-tab__image">
-                  <picture>
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./assets/images/common/information-tab-pc3.jpg"
+                <div class="form__field">
+                  <dt class="form__label">
+                    <label for="phone">電話番号</label>
+                    <span class="form__tag">必須</span>
+                  </dt>
+                  <dd class="form__data">
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form__input"
+                      placeholder="000-0000-0000"
+                      required
                     />
-                    <img
-                      src="./assets/images/common/information-tab-sp3.jpg"
-                      alt="海亀が透き通った青い海を泳いでいる様子"
-                    />
-                  </picture>
+                  </dd>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- コンタクトセクション -->
-      <section class="contact sub-contact">
-        <div class="contact__inner inner">
-          <div class="contact__contents">
-            <div class="contact__info-box">
-              <div class="contact__heading-img">
-                <img
-                  src="./assets/images/common/CodeUps-blue-logo.jpg"
-                  alt="CodeUps"
-                />
-              </div>
-              <div class="contact__details">
-                <address class="contact__info">
-                  <p class="contact__address">沖縄県那覇市1-1</p>
-                  <a href="tel:0120-000-0000" class="contact__tel"
-                    >TEL:0120-000-0000</a
-                  >
-                  <p class="contact__hours">
-                    営業時間:<time datetime="08:30">8:30</time>-<time
-                      datetime="19:00"
-                      >19:00</time
+                <div class="form__field">
+                  <dt class="form__label">
+                    <label for="radio">お問合せ項目</label>
+                    <span class="form__tag">必須</span>
+                  </dt>
+                  <dd class="form__data-radio">
+                    <span
+                      class="wpcf7-form-control-wrap"
+                      data-name="radio-category"
                     >
-                  </p>
-                  <p class="contact__holiday">定休日:毎週火曜日</p>
-                </address>
-                <div class="contact__contents-map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57273.02322022156!2d127.64350249794923!3d26.21085938028033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1731205053607!5m2!1sja!2sjp"
-                    width="600"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
+                      <span
+                        class="wpcf7-form-control wpcf7-radio form__radio"
+                        id="radio-test"
+                      >
+                        <span class="wpcf7-list-item">
+                          <label>
+                            <input
+                              type="radio"
+                              name="radio-test"
+                              value="種類1"
+                              required
+                            />
+                            <span class="wpcf7-list-item-label"
+                              >ダイビング講習について</span
+                            >
+                          </label>
+                        </span>
+                        <span class="wpcf7-list-item">
+                          <label>
+                            <input
+                              type="radio"
+                              name="radio-test"
+                              value="種類2"
+                              required
+                            />
+                            <span class="wpcf7-list-item-label"
+                              >ファンデイビングについて</span
+                            >
+                          </label>
+                        </span>
+                        <span class="wpcf7-list-item last">
+                          <label>
+                            <input
+                              type="radio"
+                              name="radio-test"
+                              value="種類3"
+                              required
+                            />
+                            <span class="wpcf7-list-item-label"
+                              >体験ダイビングについて</span
+                            >
+                          </label>
+                        </span>
+                      </span>
+                    </span>
+                  </dd>
                 </div>
-              </div>
-            </div>
-            <div class="contact__content">
-              <div class="contact__heading">
-                <div class="section-heading">
-                  <h2
-                    class="section-heading__main section-heading__main--contact"
-                  >
-                    Contact
-                  </h2>
-                  <p class="section-heading__sub section-heading__sub--contact">
-                    お問い合わせ
-                  </p>
+                <div class="form__field">
+                  <dt class="form__label">
+                    <label for="category">キャンペーン</label>
+                  </dt>
+                  <dd class="form__data-select">
+                    <select
+                      id="category"
+                      name="category"
+                      class="form__select"
+                      required
+                    >
+                      <option value="">キャンペーン内容を選択</option>
+                      <option value="type1">ライセンス講習</option>
+                      <option value="type2">ファンダイビング</option>
+                      <option value="type3">体験ダイビング</option>
+                    </select>
+                  </dd>
                 </div>
-              </div>
-              <p class="contact__description">ご予約・お問い合わせはコチラ</p>
-              <div class="contact__button">
-                <a href="#" class="button">
-                  <span class="button__bg-white"></span>
-                  <p class="button__link">Contact us</p>
-                </a>
+                <div class="form__field">
+                  <dt class="form__label">
+                    <label for="message">お問合せ内容</label>
+                    <span class="form__tag">必須</span>
+                  </dt>
+                  <dd class="form__data-textarea">
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form__textarea"
+                      required
+                    ></textarea>
+                  </dd>
+                </div>
+                <div class="form__field">
+                  <dt class="form__label-privacy"></dt>
+                  <dd class="form__data-privacy">
+                    <span class="wpcf7-form-control-wrap" data-name="privacy">
+                      <span class="wpcf7-form-control wpcf7-acceptance">
+                        <span class="wpcf7-list-item">
+                          <label>
+                            <input
+                              type="checkbox"
+                              name="privacy"
+                              class="form__checkbox"
+                              id="privacy"
+                            />
+                            <span class="wpcf7-list-item-label"
+                              >個人情報の取り扱いについて同意のうえ 送信します。
+                            </span>
+                          </label>
+                        </span>
+                      </span>
+                    </span>
+                  </dd>
+                </div>
+              </dl>
+              <div class="form__submit-button">
+                <div class="button">
+                  <div class="button__link button__link--form">
+                    <input type="submit" value="Send" class="button__input" />
+                    <span class="button__bg-white"></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -398,7 +432,7 @@
       <div class="page-top-button js-page-top"></div>
     </main>
 
-    <footer class="footer sub-footer">
+    <footer class="footer sub-footer sub-footer--confirm">
       <div class="footer__inner inner">
         <div class="footer__logo-wrap">
           <a href="#" class="footer__logo">
