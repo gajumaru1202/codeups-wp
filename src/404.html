@@ -218,251 +218,37 @@
     </header>
 
     <main>
-      <!-- アバウトmv -->
-      <section class="about-mv page-mv">
-        <div class="page-mv__inner">
-          <div class="page-mv__title">
-            <h1 class="page-mv__main-title">About us</h1>
-          </div>
-          <div class="page-mv__image">
-            <picture>
-              <source
-                media="(min-width: 768px)"
-                srcset="./assets/images/common/about-mv-pc.jpg"
-              />
-              <img
-                src="./assets/images/common/about-mv-sp.jpg"
-                alt="シーサーの写真"
-              />
-            </picture>
-          </div>
-        </div>
-      </section>
-
       <!-- パンくずリスト -->
-      <div class="breadcrumb">
+      <div class="breadcrumb breadcrumb--error">
         <div class="breadcrumb__inner inner">
           <div class="breadcrumb__list">
-            <p class="breadcrumb__item">TOP</p>
-            <p class="breadcrumb__item">私たちについて</p>
+            <p class="breadcrumb__item breadcrumb__item--error">TOP</p>
+            <p class="breadcrumb__item breadcrumb__item--error">404</p>
           </div>
         </div>
       </div>
 
-      <!-- アバウトボディセクション -->
-      <section class="about-body sub-about">
-        <div class="about-body__inner inner">
-          <div
-            class="about-body__contents about-contents about-contents--details"
-          >
-            <div
-              class="about-contents__visual-wrap about-contents__visual-wrap--details"
-            >
-              <div class="about-contents__visual-scenery sp-hidden">
-                <img
-                  src="./assets/images/common/about1-pc.jpg"
-                  alt="青空と瓦屋根のシーサー"
-                />
-              </div>
-              <div
-                class="about-contents__visual-underwater about-contents__visual-underwater--details"
-              >
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="./assets/images/common/about2-pc.jpg"
-                  />
-                  <img
-                    src="./assets/images/common/about2-sp.jpg"
-                    alt="青い海の中を泳ぐ黄色い魚"
-                  />
-                </picture>
-              </div>
-            </div>
-            <div class="about-contents__body about-contents__body--details">
-              <h3 class="about-contents__title about-contents__title--details">
-                Dive into <br />the Ocean
-              </h3>
-              <div
-                class="about-contents__info-wrapper about-contents__info-wrapper--details"
-              >
-                <p class="about-contents__text about-contents__text--details">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+      <!-- 404セクション -->
+      <section class="error sub-error">
+        <div class="error__inner inner">
+            <h1 class="error__heading">404</h1>
+            <div class="error__content">
+                <p class="error__text">
+                    申し訳ありません。<br>
+                    お探しのページが見つかりません。
                 </p>
-              </div>
+                    <div class="error__button">
+                        <a href="#" class="button button--error">
+                            <span class="button__bg-white button__bg-white--error"></span>
+                            <p class="button__link button__link--error">Page TOP</p>
+                          </a>
+                    </div>
             </div>
-          </div>
         </div>
       </section>
 
-      <!-- アバウトギャラリーセクション -->
-      <section class="about-gallery sub-about-gallery">
-        <div class="about-gallery__inner inner">
-          <div class="about-gallery__heading">
-            <div class="section-heading">
-              <h2 class="section-heading__main">Gallery</h2>
-              <p class="section-heading__sub">フォト</p>
-            </div>
-          </div>
-          <ul class="about-gallery__contents">
-            <li class="about-gallery__list">
-              <a href="#" class="about-gallery__item js-modal-open">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="./assets/images/common/about-gallery-pc1.jpg"
-                  />
-                  <img
-                    src="./assets/images/common/about-gallery-sp1.jpg"
-                    alt="赤い魚の群れが泳いでいる様子"
-                  />
-                </picture>
-              </a>
-            </li>
-            <li class="about-gallery__list">
-              <a href="#" class="about-gallery__item js-modal-open">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="./assets/images/common/about-gallery-pc2.jpg"
-                  />
-                  <img
-                    src="./assets/images/common/about-gallery-sp2.jpg"
-                    alt="透き通った青い海の上に船が浮かんでいる様子"
-                  />
-                </picture>
-              </a>
-            </li>
-            <li class="about-gallery__list">
-              <a href="#" class="about-gallery__item js-modal-open">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="./assets/images/common/about-gallery-pc3.jpg"
-                  />
-                  <img
-                    src="./assets/images/common/about-gallery-sp3.jpg"
-                    alt="透き通った青い海に２匹の熱帯魚が泳いでいる様子"
-                  />
-                </picture>
-              </a>
-            </li>
-            <li class="about-gallery__list">
-              <a href="#" class="about-gallery__item js-modal-open">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="./assets/images/common/about-gallery-pc4.jpg"
-                  />
-                  <img
-                    src="./assets/images/common/about-gallery-sp4.jpg"
-                    alt="岩陰に黄色の熱帯魚が泳いでいる様子"
-                  />
-                </picture>
-              </a>
-            </li>
-            <li class="about-gallery__list">
-              <a href="#" class="about-gallery__item js-modal-open">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="./assets/images/common/about-gallery-pc5.jpg"
-                  />
-                  <img
-                    src="./assets/images/common/about-gallery-sp5.jpg"
-                    alt="青い海の中を光り輝く魚の群れが泳いでいる様子"
-                  />
-                </picture>
-              </a>
-            </li>
-            <li class="about-gallery__list">
-              <a href="#" class="about-gallery__item js-modal-open">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="./assets/images/common/about-gallery-pc6.jpg"
-                  />
-                  <img
-                    src="./assets/images/common/about-gallery-sp6.jpg"
-                    alt="珊瑚礁で黄色い熱帯魚が泳いでいる様子"
-                  />
-                </picture>
-              </a>
-            </li>
-          </ul>
-          <div class="about-gallery__modal modal js-modal"></div>
-        </div>
-      </section>
-
-      <!-- コンタクトセクション -->
-      <section class="contact sub-contact">
-        <div class="contact__inner inner">
-          <div class="contact__contents">
-            <div class="contact__info-box">
-              <div class="contact__heading-img">
-                <img
-                  src="./assets/images/common/CodeUps-blue-logo.jpg"
-                  alt="CodeUps"
-                />
-              </div>
-              <div class="contact__details">
-                <address class="contact__info">
-                  <p class="contact__address">沖縄県那覇市1-1</p>
-                  <a href="tel:0120-000-0000" class="contact__tel"
-                    >TEL:0120-000-0000</a
-                  >
-                  <p class="contact__hours">
-                    営業時間:<time datetime="08:30">8:30</time>-<time
-                      datetime="19:00"
-                      >19:00</time
-                    >
-                  </p>
-                  <p class="contact__holiday">定休日:毎週火曜日</p>
-                </address>
-                <div class="contact__contents-map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57273.02322022156!2d127.64350249794923!3d26.21085938028033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1731205053607!5m2!1sja!2sjp"
-                    width="600"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="contact__content">
-              <div class="contact__heading">
-                <div class="section-heading">
-                  <h2
-                    class="section-heading__main section-heading__main--contact"
-                  >
-                    Contact
-                  </h2>
-                  <p class="section-heading__sub section-heading__sub--contact">
-                    お問い合わせ
-                  </p>
-                </div>
-              </div>
-              <p class="contact__description">ご予約・お問い合わせはコチラ</p>
-              <div class="contact__button">
-                <a href="#" class="button">
-                  <span class="button__bg-white"></span>
-                  <p class="button__link">Contact us</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ページトップボタン -->
-      <div class="page-top-button js-page-top"></div>
-    </main>
-
-    <footer class="footer sub-footer">
+      <!-- フッター -->
+    <footer class="footer sub-footer sub-footer--error">
       <div class="footer__inner inner">
         <div class="footer__logo-wrap">
           <a href="#" class="footer__logo">
