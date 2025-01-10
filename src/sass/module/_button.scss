@@ -9,6 +9,15 @@
   margin-bottom: rem(10);
 }
 
+.button:hover {
+  opacity: 1;
+}
+
+.button.button--error {
+  background-color: $white;
+  border: 1px solid $white;
+}
+
 .button::after {
   content: "";
   position: absolute;
@@ -20,6 +29,10 @@
   height: 105%;
   z-index: -1;
   transition: transform 0.3s;
+}
+
+.button.button--error::after {
+  border: 1px solid $white;
 }
 
 @media (any-hover: hover) {
@@ -50,6 +63,10 @@
   z-index: 0;
 }
 
+.button__bg-white.button__bg-white--error::before {
+  background-color: $blue;
+}
+
 .button__link {
   position: relative;
   display: inline-block;
@@ -63,10 +80,25 @@
   z-index: 1;
 }
 
+.button__link.button__link--error {
+  color: $blue;
+}
+
+.button__link.button__link--form {
+  padding: 0;
+}
+
 @media (any-hover: hover) {
   .button:hover .button__link {
     color: $blue;
     border-color: $blue;
+  }
+}
+
+@media (any-hover: hover) {
+  .button.button--error:hover .button__link.button__link--error {
+    color: $white;
+    border-color: $white;
   }
 }
 
@@ -80,11 +112,26 @@
   height: rem(1);
   border-radius: 50px;
   transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.button__link.button__link--error::before {
+  background-color: $blue;
+}
+
+.button__link.button__link--form::before {
+  left: 50%;
 }
 
 @media (any-hover: hover) {
   .button:hover .button__link::before {
     background-color: $blue;
+  }
+}
+
+@media (any-hover: hover) {
+  .button.button--error:hover .button__link.button__link--error::before {
+    background-color: $white;
   }
 }
 
@@ -103,8 +150,43 @@
   transition: border-color 0.3s ease;
 }
 
+.button__link.button__link--error::after {
+  border-top: 1px solid $blue;
+  border-right: 1px solid $blue;
+}
+
+.button__link.button__link--form::after {
+  left: calc(50% + rem(32));
+}
+
 @media (any-hover: hover) {
   .button:hover .button__link::after {
     border-color: $blue;
+  }
+}
+
+@media (any-hover: hover) {
+  .button.button--error:hover .button__link.button__link--error::after {
+    border-color: $white;
+  }
+}
+.button__input {
+  position: relative;
+  display: block;
+  color: $white;
+  font-family: $english-font;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1;
+  padding: rem(18.5) rem(116) rem(18.5) rem(47);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+@media (any-hover: hover) {
+  .button:hover .button__input {
+    color: $blue;
   }
 }

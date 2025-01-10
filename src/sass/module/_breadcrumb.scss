@@ -1,4 +1,12 @@
 @use "global" as *;
+.breadcrumb--error {
+  background-color: $blue;
+  padding-top: rem(80);
+  @include mq(md) {
+    padding-top: rem(91.2);
+  }
+}
+
 .breadcrumb__list {
   display: flex;
   gap: rem(20);
@@ -10,7 +18,11 @@
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1;
-  margin-top: 11px;
+  margin-top: rem(11);
+}
+
+.breadcrumb__item.breadcrumb__item--error {
+  color: $white;
 }
 
 .breadcrumb__item:not(:first-child) {
@@ -28,4 +40,9 @@
   border-right: 1px solid $black;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.breadcrumb__item.breadcrumb__item--error:not(:first-child)::after {
+  border-top: 1px solid $white;
+  border-right: 1px solid $white;
 }

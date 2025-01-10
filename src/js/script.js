@@ -340,3 +340,13 @@ $(document).ready(function () {
     }
   });
 });
+
+// アコーディオンメニュー
+$(function () {
+  $(".js-accordion__item .js-accordion__answer").css("display", "block");
+  $(".js-accordion__item .js-accordion__question").addClass("is-open");
+  $(".js-accordion__question").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
+  });
+});

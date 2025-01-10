@@ -1,0 +1,6 @@
+@use "global" as *;
+.contact-confirm__inner.inner {
+  @include mq(md) {
+    max-width: calc(rem(700) + rem(20) * 2);
+  }
+}

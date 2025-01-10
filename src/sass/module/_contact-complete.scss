@@ -1,0 +1,21 @@
+@use "global" as *;
+.contact-complete__contents {
+  text-align: center;
+}
+
+.contact-complete__title {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.125;
+}
+
+.contact-complete__description {
+  margin-top: rem(37);
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: normal;
+}
