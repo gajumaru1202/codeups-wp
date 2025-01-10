@@ -5,3 +5,25 @@
     margin-top: rem(158.8);
   }
 }
+
+.sub-footer.sub-footer--complete {
+  margin-top: rem(144);
+  @include mq(md) {
+    margin-top: rem(119);
+  }
+}
+
+.sub-footer.sub-footer--confirm {
+  margin-top: rem(138);
+  @include mq(md) {
+    margin-top: rem(154);
+  }
+}
+
+.sub-footer.sub-footer--error {
+  margin-top: 0;
+  padding-top: rem(83.2);
+  @include mq(md) {
+    padding-top: rem(222);
+  }
+}

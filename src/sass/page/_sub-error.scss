@@ -1,0 +1,29 @@
+@use "global" as *;
+.sub-error {
+  background-color: $blue;
+  padding-top: rem(53.6);
+  position: relative;
+  @include mq(md) {
+    padding-top: rem(120);
+  }
+}
+
+.sub-error::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/common/404-logo-sp.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(329);
+  height: rem(294);
+  @include mq(md) {
+    background-image: url("../images/common/404-logo-pc.svg");
+    width: rem(665);
+    height: rem(594);
+    top: 62%;
+    left: 37%;
+  }
+}
