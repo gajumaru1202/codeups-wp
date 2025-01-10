@@ -1,0 +1,21 @@
+@use "global" as *;
+.terms__inner {
+  @include mq(md) {
+    padding-inline: rem(160);
+  }
+}
+
+.terms__heading {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: normal;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.terms__contents {
+  margin-top: rem(40);
+}

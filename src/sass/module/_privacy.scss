@@ -1,0 +1,21 @@
+@use "global" as *;
+.privacy__inner {
+  @include mq(md) {
+    padding-inline: rem(160);
+  }
+}
+
+.privacy__heading {
+  color: $black;
+  font-family: $japanese-font;
+  font-size: rem(24);
+  font-weight: 500;
+  line-height: normal;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.privacy__contents {
+  margin-top: rem(40);
+}
