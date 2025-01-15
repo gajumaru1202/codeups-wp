@@ -12,6 +12,8 @@
   position: relative;
   padding: rem(16) rem(50) rem(16) rem(16);
   background-color: $blue;
+  width: 100%;
+  text-align: left;
   @include mq(md) {
     padding: rem(25) rem(80) rem(25) rem(40);
   }

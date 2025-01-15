@@ -52,10 +52,14 @@
 
 .price-table__row {
   width: 100%;
-  height: rem(64);
+  height: rem(59);
   display: table-row;
+}
+
+.price-table__row:first-child {
+  height: rem(62);
   @include mq(md) {
-    height: rem(59);
+    height: rem(59.5);
   }
 }
 

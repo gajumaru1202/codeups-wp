@@ -6,6 +6,7 @@
   row-gap: rem(16);
   @include mq(md) {
     display: flex;
+    flex-wrap: wrap;
     gap: rem(32);
   }
 }
@@ -24,8 +25,8 @@
   background-color: $blue;
 }
 
-.labels__list:hover {
-  @media (any-hover: hover) {
+@media (any-hover: hover) {
+  .labels__list:hover {
     background-color: $blue;
   }
 }
@@ -38,15 +39,15 @@
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1;
-  transition: color opacity 0.3s;
+  transition: color, opacity 0.3s;
 }
 
 .labels__item.is-active {
   color: $white;
 }
 
-.labels__list:hover .labels__item {
-  @media (any-hover: hover) {
+@media (any-hover: hover) {
+  .labels__list:hover .labels__item {
     color: $white;
     opacity: 1;
   }

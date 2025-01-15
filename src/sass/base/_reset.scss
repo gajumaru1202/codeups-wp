@@ -122,3 +122,12 @@ a {
     opacity: 0.7;
   }
 }
+
+button:focus {
+  outline: 3px solid #0078d4;
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}

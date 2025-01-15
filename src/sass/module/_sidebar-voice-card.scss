@@ -10,7 +10,7 @@
 }
 
 .sidebar-voice-card__content {
-  margin-top: rem(12);
+  margin-top: rem(10.4);
 }
 
 .sidebar-voice-card__age {
@@ -32,8 +32,9 @@
 
 .sidebar-voice-card__button {
   text-align: center;
-  margin-top: rem(38);
-  @include mq(md) {
-    margin-top: rem(39);
-  }
+  margin-top: rem(44);
+}
+
+.sidebar-voice-card__button.sidebar-voice-card__button--single {
+  margin-top: rem(42.4);
 }

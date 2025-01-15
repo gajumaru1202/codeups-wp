@@ -3,19 +3,46 @@
   padding-inline: rem(25);
   display: flex;
   flex-direction: column;
-  gap: rem(79);
   @include mq(md) {
-    gap: rem(78);
     padding-inline: 0;
     width: 27.3%;
   }
 }
 
+.sidebar__item:nth-child(2) {
+  margin-top: rem(81);
+  @include mq(md) {
+    margin-top: rem(79);
+  }
+}
+
+.sidebar__item.sidebar__item--single:nth-child(2) {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(79);
+  }
+}
+
+.sidebar__item:nth-child(3) {
+  margin-top: rem(73.2);
+}
+
+.sidebar__item.sidebar__item--single:nth-child(3) {
+  margin-top: rem(74);
+}
+
+.sidebar__item:nth-child(4) {
+  margin-top: rem(75);
+}
+
 .sidebar__contents {
-  margin-top: rem(25);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(25);
+  }
 }
 
 .sidebar__campaign-button {
   text-align: center;
-  margin-top: rem(36);
+  margin-top: rem(39);
 }

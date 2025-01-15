@@ -5,17 +5,32 @@
   padding: rem(16);
   display: flex;
   gap: 16px;
+  transition: opacity 0.3s;
+}
+
+@media (any-hover: hover) {
+  .sidebar-blog-card:hover {
+    opacity: 1;
+  }
+}
+
+@media (any-hover: hover) {
+  .sidebar-blog-card:hover .sidebar-blog-card__image img {
+    transform: scale(1.1);
+  }
 }
 
 .sidebar-blog-card__image {
   aspect-ratio: 121 / 90;
   max-width: rem(121);
+  overflow: hidden;
 }
 
 .sidebar-blog-card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .sidebar-blog-card__info {

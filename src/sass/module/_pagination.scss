@@ -25,14 +25,14 @@
   background-color: $blue;
 }
 
-.pagination__item:hover {
-  @media (any-hover: hover) {
+@media (any-hover: hover) {
+  .pagination__item:hover {
     background-color: $blue;
   }
 }
 
-.pagination__item:hover .pagination__link {
-  @media (any-hover: hover) {
+@media (any-hover: hover) {
+  .pagination__item:hover .pagination__link {
     color: $white;
     opacity: 1;
   }
@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color opacity 0.3s;
+  transition: color, opacity 0.3s;
 }
 
 .pagination__link.is-active {
@@ -72,8 +72,8 @@
   left: 45%;
 }
 
-.pagination__item:first-child:hover.pagination__item:first-child::after {
-  @media (any-hover: hover) {
+@media (any-hover: hover) {
+  .pagination__item:first-child:hover.pagination__item:first-child::after {
     border-top: solid 1px $white;
     border-right: solid 1px $white;
   }
@@ -96,8 +96,8 @@
   left: 30%;
 }
 
-.pagination__item:last-child:hover.pagination__item:last-child::after {
-  @media (any-hover: hover) {
+@media (any-hover: hover) {
+  .pagination__item:last-child:hover.pagination__item:last-child::after {
     border-top: solid 1px $white;
     border-right: solid 1px $white;
   }

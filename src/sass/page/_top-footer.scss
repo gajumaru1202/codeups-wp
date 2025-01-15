@@ -2,6 +2,6 @@
 .top-footer {
   margin-top: rem(94.8);
   @include mq(md) {
-    margin-top: cla(rem(140) - rem(10));
+    margin-top: calc(rem(140) - rem(10));
   }
 }

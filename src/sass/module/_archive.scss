@@ -8,7 +8,10 @@
 .archive__list {
   display: flex;
   flex-direction: column;
-  gap: rem(4);
+  gap: rem(3);
+  @include mq(md) {
+    gap: rem(4);
+  }
 }
 
 .archive__main-toggle {
@@ -25,20 +28,22 @@
   transition: opacity 0.3s;
 }
 
-.archive__main-toggle:hover {
-  opacity: 0.7;
+@media (any-hover: hover) {
+  .archive__main-toggle:hover {
+    opacity: 0.7;
+  }
 }
 
 .archive__main-toggle::before {
   position: absolute;
   content: "";
-  top: rem(9);
+  top: rem(10);
   left: rem(2);
   display: inline-block;
   border-style: solid;
-  border-width: 0.5em 0 0.5em 0.865em;
+  border-width: 0.4em 0 0.5em 0.765em;
   border-color: transparent transparent transparent $blue;
-  transform: translateY(0.1em) scale(0.8);
+  transform: scale(0.8);
   transition: transform 0.3s ease;
 }
 
@@ -74,11 +79,10 @@
 .archive__sub-toggle::before {
   position: absolute;
   content: "";
-  top: rem(3);
-  left: rem(4);
+  top: rem(8);
+  left: rem(5.6);
   display: inline-block;
   border-style: solid;
-  border-width: 0.5em 0 0.5em 0.865em;
+  border-width: 0.4em 0 0.5em 0.765em;
   border-color: transparent transparent transparent $blue;
-  transform: translateY(0.1em) scale(0.8);
 }

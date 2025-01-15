@@ -13,7 +13,8 @@
 }
 
 .information-tab__button {
-  padding: rem(10) rem(16);
+  width: 100%;
+  padding: rem(10) rem(8);
   color: $blue;
   font-family: $japanese-font;
   font-size: rem(14);
@@ -23,6 +24,7 @@
   background-color: $blue-bg;
   transition: color, background-color 0.3s;
   @include mq(md) {
+    width: auto;
     position: relative;
     padding: rem(29) rem(30) rem(26) rem(102);
     font-size: clamp(rem(23), 1.67vw, rem(24));
@@ -69,16 +71,16 @@
     background-image: url("../images/common/information-tab-logo3.svg");
   }
 }
-
-.information-tab__button:hover {
-  @media (any-hover: hover) {
+@media (any-hover: hover) {
+  .information-tab__button:hover {
     color: $white;
     background-color: $blue;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
   }
 }
 
-.information-tab__button:hover.information-tab__button::after {
-  @media (any-hover: hover) {
+@media (any-hover: hover) {
+  .information-tab__button:hover.information-tab__button::after {
     filter: invert(100%) sepia(0%) saturate(1912%) hue-rotate(152deg)
       brightness(121%) contrast(100%);
   }
@@ -87,6 +89,7 @@
 .information-tab__button.is-active {
   color: $white;
   background-color: $blue;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .information-tab__button.is-active.information-tab__button::after {
