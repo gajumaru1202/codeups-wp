@@ -11,27 +11,10 @@
   }
 }
 
-.labels__list {
+.labels__item {
   padding: rem(9) rem(10);
   border: 1px solid $blue;
-  transition: color 0.3s;
-  @include mq(md) {
-    width: rem(162);
-    padding: rem(10);
-  }
-}
-
-.labels__list.is-active {
-  background-color: $blue;
-}
-
-@media (any-hover: hover) {
-  .labels__list:hover {
-    background-color: $blue;
-  }
-}
-
-.labels__item {
+  transition: all 0.3s;
   display: block;
   text-align: center;
   color: $blue;
@@ -39,15 +22,20 @@
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1;
-  transition: color, opacity 0.3s;
+  @include mq(md) {
+    padding: rem(10);
+    width: rem(162);
+  }
 }
 
 .labels__item.is-active {
+  background-color: $blue;
   color: $white;
 }
 
 @media (any-hover: hover) {
-  .labels__list:hover .labels__item {
+  .labels__item:hover {
+    background-color: $blue;
     color: $white;
     opacity: 1;
   }

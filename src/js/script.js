@@ -343,10 +343,59 @@ $(document).ready(function () {
 
 // アコーディオンメニュー
 $(function () {
-  $(".js-accordion__item .js-accordion__answer").css("display", "block");
+  $(".js-accordion__item .js-accordion__answer").show();
   $(".js-accordion__item .js-accordion__question").addClass("is-open");
   $(".js-accordion__question").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
+});
+
+// パラメータ
+$(function () {
+  const params = new URLSearchParams(window.location.search);
+  const tabParam = params.get("tab");
+
+  const tabMap = {
+    license: "ライセンス講習",
+    experience: "体験ダイビング",
+    night: "体験ダイビング",
+    fun: "ファンダイビング",
+  };
+
+  if (tabParam && tabMap[tabParam]) {
+    const targetText = tabMap[tabParam];
+
+    // --- ▼ キャンペーンセクションのタブ制御 ▼ ---
+    if ($(".campaign-list__label-wrap").length) {
+      $(".labels__list, .labels__item").removeClass("is-active");
+
+      $(".labels__item").each(function () {
+        if ($(this).text().trim() === targetText) {
+          $(this).addClass("is-active");
+          $(this).parent().addClass("is-active");
+        }
+      });
+    }
+
+    // --- ▼ インフォメーションセクションのタブ制御 ▼ ---
+    if ($(".information-tab").length) {
+      const tabIndexMap = {
+        license: 0,
+        fun: 1,
+        experience: 2,
+        night: 2,
+      };
+
+      const index = tabIndexMap[tabParam];
+
+      if (index !== undefined) {
+        $(".js-tab-button").removeClass("is-active");
+        $(".js-tab-content").removeClass("is-active");
+
+        $(".js-tab-button").eq(index).addClass("is-active");
+        $(".js-tab-content").eq(index).addClass("is-active");
+      }
+    }
+  }
 });
