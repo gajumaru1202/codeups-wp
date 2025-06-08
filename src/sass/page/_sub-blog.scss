@@ -1,27 +1,7 @@
 @use "global" as *;
 .sub-blog {
-  margin-top: rem(55);
-  position: relative;
+  margin-top: rem(56);
   @include mq(md) {
     margin-top: rem(153);
-  }
-}
-
-.sub-blog::after {
-  content: "";
-  position: absolute;
-  width: min(rem(120), 32vw);
-  height: min(rem(66), 17.6vw);
-  top: rem(-24);
-  left: calc(50% - min(46vw, rem(620.8)));
-  background-image: url("../images/common/blue-fish--right.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-  @include mq(md) {
-    width: min(rem(301), 20.9vw);
-    height: min(rem(138), 9.58vw);
-    top: rem(-70);
-    left: calc(50% - min(48vw, rem(620.8)));
   }
 }

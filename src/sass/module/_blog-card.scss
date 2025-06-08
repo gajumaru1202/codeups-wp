@@ -9,10 +9,6 @@
   flex-direction: column;
 }
 
-.blog-card.blog-card--details {
-  padding-bottom: rem(23.4);
-}
-
 @media (any-hover: hover) {
   .blog-card:hover {
     opacity: 1;

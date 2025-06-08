@@ -9,3 +9,33 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+.blog-cards.blog-cards--details {
+  gap: rem(41.2);
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(82);
+  }
+}
+
+.blog-cards__item:nth-child(6) {
+  position: relative;
+}
+
+.blog-cards__item:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/common/blog-contents-wave.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  top: rem(-50);
+  left: 0;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  @include mq(md) {
+    display: none;
+  }
+}

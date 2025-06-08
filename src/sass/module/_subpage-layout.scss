@@ -1,0 +1,33 @@
+@use "global" as *;
+.subpage-layout {
+  position: relative;
+}
+
+.subpage-layout::after {
+  content: "";
+  position: absolute;
+  width: min(rem(120), 32vw);
+  height: min(rem(66), 17.6vw);
+  top: rem(-24);
+  left: calc(50% - min(46vw, rem(620.8)));
+  background-image: url("../images/common/blue-fish--right.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  @include mq(md) {
+    width: min(rem(301), 20.9vw);
+    height: min(rem(138), 9.58vw);
+    top: rem(-69);
+    left: calc(50% - min(48vw, rem(620.8)));
+  }
+}
+
+.subpage-layout.subpage-layout--about::after {
+  @include mq(md) {
+    top: rem(-150);
+  }
+}
+
+.subpage-layout.subpage-layout--information::after {
+  top: rem(-92.8);
+}

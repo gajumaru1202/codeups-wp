@@ -8,3 +8,13 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.voice-cards.voice-cards--details {
+  gap: rem(40.5);
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  @include mq(md) {
+    row-gap: rem(78.5);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

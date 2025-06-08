@@ -137,49 +137,53 @@ $(document).ready(function () {
 
 // メインビジュアル
 $(document).ready(function () {
-  $("body").addClass("no-scroll");
+  // 現在のパスが "/" もしくは index.html のときに実行
+  const isTopPage =
+    location.pathname === "/" || location.pathname === "/index.html";
 
-  setTimeout(function () {
-    $(".js-mv-title").addClass("fade-out");
-  }, 250);
+  if (isTopPage) {
+    $("body").addClass("no-scroll");
 
-  setTimeout(function () {
-    $(".js-loading-image").addClass("show");
-  }, 450);
+    setTimeout(function () {
+      $(".js-mv-title").addClass("fade-out");
+    }, 250);
 
-  setTimeout(function () {
-    $(".js-loading-title").addClass("show");
-  }, 3000);
+    setTimeout(function () {
+      $(".js-loading-image").addClass("show");
+    }, 450);
 
-  setTimeout(function () {
-    $(".js-mv-title").removeClass("fade-out").addClass("change-color");
-  }, 3000);
+    setTimeout(function () {
+      $(".js-loading-title").addClass("show");
+    }, 3000);
 
-  setTimeout(function () {
-    $(".js-mv-slider").addClass("show");
-  }, 3000);
+    setTimeout(function () {
+      $(".js-mv-title").removeClass("fade-out").addClass("change-color");
+    }, 3000);
 
-  setTimeout(function () {
-    $(".js-loading-image").addClass("fade-out");
-  }, 5000);
+    setTimeout(function () {
+      $(".js-mv-slider").addClass("show");
+    }, 3000);
 
-  $("body").addClass("no-scroll");
+    setTimeout(function () {
+      $(".js-loading-image").addClass("fade-out");
+    }, 5000);
 
-  setTimeout(function () {
-    $("body").removeClass("no-scroll");
-  }, 3000);
+    setTimeout(function () {
+      $("body").removeClass("no-scroll");
+    }, 3000);
 
-  setTimeout(function () {
-    new Swiper(".js-mv-slider", {
-      loop: true,
-      effect: "fade",
-      speed: 3500,
-      allowTouchMove: false,
-      autoplay: {
-        delay: 3500,
-      },
-    });
-  }, 7000);
+    setTimeout(function () {
+      new Swiper(".js-mv-slider", {
+        loop: true,
+        effect: "fade",
+        speed: 3500,
+        allowTouchMove: false,
+        autoplay: {
+          delay: 3500,
+        },
+      });
+    }, 7000);
+  }
 });
 
 // キャンペーンセクション
