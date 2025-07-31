@@ -1,11 +1,11 @@
 @use "global" as *;
-.terms__inner {
+.policy__inner {
   @include mq(md) {
     padding-inline: rem(160);
   }
 }
 
-.terms__heading {
+.policy__heading h2{
   color: $black;
   font-family: $japanese-font;
   font-size: rem(24);
@@ -16,6 +16,6 @@
   }
 }
 
-.terms__contents {
+.policy__contents {
   margin-top: rem(40);
 }
