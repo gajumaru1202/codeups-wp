@@ -49,7 +49,7 @@
         <a href="index.html" class="header__name">
           <img src="./assets/images/common/CodeUps-logo.png" alt="CodeUps" />
         </a>
-        <nav class="header__nav sp-hidden">
+        <nav class="header__nav pc-only">
           <ul class="header__items">
             <li class="header__item">
               <a href="page-campaign.html" class="header__link">
@@ -315,11 +315,11 @@
                     <span class="campaign-card__price-original">¥56,000</span>
                     <span class="campaign-card__price-discounted">¥46,000</span>
                   </div>
-                  <p class="campaign-card__details-text sp-hidden">
+                  <p class="campaign-card__details-text pc-only">
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                   </p>
-                  <div class="campaign-card__details-meta sp-hidden">
+                  <div class="campaign-card__details-meta pc-only">
                     <div class="campaign-card__date-wrap">
                       <time class="campaign-card__date" datetime="2023-06-01"
                         >2023/6/1</time
@@ -380,11 +380,11 @@
                     <span class="campaign-card__price-discounted">¥18,000</span>
                   </div>
 
-                  <p class="campaign-card__details-text sp-hidden">
+                  <p class="campaign-card__details-text pc-only">
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                   </p>
-                  <div class="campaign-card__details-meta sp-hidden">
+                  <div class="campaign-card__details-meta pc-only">
                     <div class="campaign-card__date-wrap">
                       <time class="campaign-card__date" datetime="2023-06-01"
                         >2023/6/1</time
@@ -444,11 +444,11 @@
                     <span class="campaign-card__price-original">¥10,000</span>
                     <span class="campaign-card__price-discounted">¥8,000</span>
                   </div>
-                  <p class="campaign-card__details-text sp-hidden">
+                  <p class="campaign-card__details-text pc-only">
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                   </p>
-                  <div class="campaign-card__details-meta sp-hidden">
+                  <div class="campaign-card__details-meta pc-only">
                     <div class="campaign-card__date-wrap">
                       <time class="campaign-card__date" datetime="2023-06-01"
                         >2023/6/1</time
@@ -475,7 +475,7 @@
                 <div class="campaign-card__image">
                   <img
                     src="./assets/images/common/campaign4.jpg"
-                    alt="４人の人が海上に顔を出してハンドサインをしている様子、"
+                    alt="４人の人が海上に顔を出してハンドサインをしている様子"
                     loading="lazy"
                   />
                 </div>
@@ -508,11 +508,11 @@
                     <span class="campaign-card__price-original">¥20,000</span>
                     <span class="campaign-card__price-discounted">¥16,000</span>
                   </div>
-                  <p class="campaign-card__details-text sp-hidden">
+                  <p class="campaign-card__details-text pc-only">
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                   </p>
-                  <div class="campaign-card__details-meta sp-hidden">
+                  <div class="campaign-card__details-meta pc-only">
                     <div class="campaign-card__date-wrap">
                       <time class="campaign-card__date" datetime="2023-06-01"
                         >2023/6/1</time
@@ -539,7 +539,8 @@
             <div class="pagination">
               <ul class="pagination__list">
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link pagination__link--back">
+                  </a>
                 </li>
                 <li class="pagination__item is-active">
                   <a href="#" class="pagination__link is-active">1</a>
@@ -553,14 +554,14 @@
                 <li class="pagination__item">
                   <a href="#" class="pagination__link">4</a>
                 </li>
-                <li class="pagination__item sp-hidden">
+                <li class="pagination__item pc-only">
                   <a href="#" class="pagination__link">5</a>
                 </li>
-                <li class="pagination__item sp-hidden">
+                <li class="pagination__item pc-only">
                   <a href="#" class="pagination__link">6</a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link pagination__link--next"></a>
                 </li>
               </ul>
             </div>
@@ -573,7 +574,7 @@
         <div class="contact__inner inner">
           <div class="contact__contents">
             <div class="contact__info-box">
-              <div class="contact__heading-img">
+              <div class="contact__heading-image">
                 <img
                   src="./assets/images/common/CodeUps-blue-logo.jpg"
                   alt="CodeUps"
@@ -728,7 +729,7 @@
                 <div class="menu__link-wrap">
                   <div class="menu__link-main menu__link-main--lineheight">
                     <a href="page-privacy.html"
-                      >プライバシー<br class="pc-hidden" />ポリシー</a
+                      >プライバシー<br class="sp-only" />ポリシー</a
                     >
                   </div>
                 </div>
