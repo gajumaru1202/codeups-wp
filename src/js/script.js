@@ -137,12 +137,47 @@ $(document).ready(function () {
 
 // メインビジュアル
 $(function () {
-  var path = location.pathname;
+  // WordPressのトップページ判定はbodyに付与されたクラスで判定する
+  var isTopPage = $("body").hasClass("home") || $("body").hasClass("front-page");
 
-  // 「末尾が /index.html または /」であればトップページとみなす
-  var isTopPage = path.endsWith("/index.html") || path.endsWith("/");
+  if (!isTopPage) {
+    // トップページでない場合はスクロール可能のまま、何もしない
+    return;
+  }
 
-  if (!isTopPage) return;
+  // トップページの場合はローディングアニメーションを開始
+  $("body").addClass("no-scroll");
+
+  setTimeout(() => $(".js-mv-title").addClass("fade-out"), 250);
+  setTimeout(() => $(".js-loading-image").addClass("show"), 450);
+  setTimeout(() => $(".js-loading-title").addClass("show"), 3000);
+
+  setTimeout(() => {
+    $(".js-mv-title").removeClass("fade-out").addClass("change-color");
+    $(".js-mv-slider").addClass("show");
+    $("body").removeClass("no-scroll");
+  }, 3000);
+
+  setTimeout(() => $(".js-loading-image").addClass("fade-out"), 5000);
+
+  setTimeout(() => {
+    new Swiper(".js-mv-slider", {
+      loop: true,
+      effect: "fade",
+      speed: 3500,
+      allowTouchMove: false,
+      autoplay: {
+        delay: 3500,
+      },
+    });
+  }, 7000);
+});
+$(function () {
+  var isTopPage = $("body").hasClass("home") || $("body").hasClass("front-page");
+
+  if (!isTopPage) {
+    return;
+  }
 
   $("body").addClass("no-scroll");
 
@@ -171,37 +206,39 @@ $(function () {
   }, 7000);
 });
 
+
 // キャンペーンセクション
-$(document).ready(function () {
-  const swiper = new Swiper(".js-campaign-slider", {
-    slidesPerView: "auto",
-    loop: true,
-    speed: 6000,
-    spaceBetween: 24,
-
-    breakpoints: {
-      768: {
-        spaceBetween: 39,
-        loop: true,
-        autoplay: false,
-        allowTouchMove: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        speed: 300,
-        slidesPerGroup: 1,
+jQuery(function ($) {
+  var $slider = $('.js-campaign-slider');
+  if ($slider.length) {
+    new Swiper('.js-campaign-slider', {
+      slidesPerView: 'auto',
+      loop: true,
+      speed: 6000,
+      spaceBetween: 24,
+      breakpoints: {
+        768: {
+          spaceBetween: 39,
+          autoplay: false,
+          allowTouchMove: true,
+          navigation: {
+            nextEl: '.campaign-cards__swiper-button-next',
+            prevEl: '.campaign-cards__swiper-button-prev'
+          },
+          speed: 300,
+          slidesPerGroup: 1
+        }
       },
-    },
-
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    loopedSlides: 8,
-    allowTouchMove: false,
-  });
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      },
+      allowTouchMove: false
+    });
+  }
 });
+
+
 
 // ページトップへ戻るボタン
 $(function () {
@@ -226,29 +263,34 @@ $(function () {
 });
 
 // 背景アニメーション
-var box = $(".js-color-box"),
-  speed = 700;
+jQuery(function ($) {
+  var box = $(".js-color-box"),
+    speed = 700;
 
-box.each(function () {
-  $(this).append('<div class="color"></div>');
-  var color = $(this).find($(".color")),
-    image = $(this).find("img");
-  var counter = 0;
+  box.each(function () {
+    const $this = $(this);
+    $this.append('<div class="color"></div>');
 
-  image.css("opacity", "0");
-  color.css("width", "0%");
+    const $color = $this.find(".color");
+    const $image = $this.find("img");
+    let counter = 0;
 
-  color.on("inview", function () {
-    if (counter == 0) {
-      $(this)
-        .delay(200)
-        .animate({ width: "100%" }, speed, function () {
-          image.css("opacity", "1");
-          $(this).css({ left: "0", right: "auto" });
+    $image.css("opacity", "0");
+
+    $this.on("inview", function (event, isInView) {
+      if (isInView && counter === 0) {
+        $color.animate({ width: "100%" }, speed, function () {
+          $image.css("opacity", "1");
+          $(this).css({
+            left: "0",
+            right: "auto",
+          });
           $(this).animate({ width: "0%" }, speed);
         });
-      counter = 1;
-    }
+
+        counter = 1;
+      }
+    });
   });
 });
 
@@ -345,46 +387,21 @@ $(function () {
   const params = new URLSearchParams(window.location.search);
   const tabParam = params.get("tab");
 
-  const tabMap = {
-    license: "ライセンス講習",
-    experience: "体験ダイビング",
-    night: "体験ダイビング",
-    fun: "ファンダイビング",
+  const tabIndexMap = {
+    license: 0,    
+    fun: 1,         
+    experience: 2,  
   };
 
-  if (tabParam && tabMap[tabParam]) {
-    const targetText = tabMap[tabParam];
+  const index = tabIndexMap[tabParam];
 
-    // --- ▼ キャンペーンセクションのタブ制御 ▼ ---
-    if ($(".campaign-list__label-wrap").length) {
-      $(".labels__list, .labels__item").removeClass("is-active");
+  if (index !== undefined && $(".information-tab").length) {
+    $(".js-tab-button").removeClass("is-active");
+    $(".js-tab-content").removeClass("is-active");
 
-      $(".labels__item").each(function () {
-        if ($(this).text().trim() === targetText) {
-          $(this).addClass("is-active");
-          $(this).parent().addClass("is-active");
-        }
-      });
-    }
-
-    // --- ▼ インフォメーションセクションのタブ制御 ▼ ---
-    if ($(".information-tab").length) {
-      const tabIndexMap = {
-        license: 0,
-        fun: 1,
-        experience: 2,
-        night: 2,
-      };
-
-      const index = tabIndexMap[tabParam];
-
-      if (index !== undefined) {
-        $(".js-tab-button").removeClass("is-active");
-        $(".js-tab-content").removeClass("is-active");
-
-        $(".js-tab-button").eq(index).addClass("is-active");
-        $(".js-tab-content").eq(index).addClass("is-active");
-      }
-    }
+    $(".js-tab-button").eq(index).addClass("is-active");
+    $(".js-tab-content").eq(index).addClass("is-active");
   }
 });
+
+

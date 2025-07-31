@@ -28,10 +28,11 @@
   }
 }
 
-.labels__item.is-active {
+.labels__list.is-active .labels__item {
   background-color: $blue;
   color: $white;
 }
+
 
 @media (any-hover: hover) {
   .labels__item:hover {

@@ -48,7 +48,7 @@ $blue: #408f95;
 $blue-bg: #ddf0f1;
 
 // spのみ表示
-.pc-hidden {
+.sp-only {
   display: block;
   @include mq(md) {
     display: none;
@@ -56,7 +56,7 @@ $blue-bg: #ddf0f1;
 }
 
 // pcのみ表示
-.sp-hidden {
+.pc-only {
   display: none;
   @include mq(md) {
     display: block;

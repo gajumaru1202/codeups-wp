@@ -205,11 +205,16 @@
   opacity: 1;
 }
 
+.wpcf7-form-control-wrap[data-name="radio-category"] .form__radio.wpcf7-not-valid  .wpcf7-list-item-label::before {
+  border: 2px solid #C94800;
+  background-color: rgba(201, 72, 0, 0.2);
+}
+
 .form__checkbox:checked + .wpcf7-list-item-label::after {
   opacity: 1;
 }
 
-.wpcf7-list-item label {
+.wpcf7-list-item  {
   display: flex;
   justify-content: center;
 }
@@ -265,4 +270,31 @@
   @include mq(md) {
     margin-top: rem(40);
   }
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-response-output {
+  display: none ;
+}
+
+.wpcf7-not-valid-tip {
+margin-top: rem(3);
+color: #C94800;
+font-family: $japanese-font;
+font-size: rem(14);
+font-style: normal;
+font-weight: $normal;
+line-height: normal;
+}
+
+input[type="text"].wpcf7-not-valid,
+input[type="email"].wpcf7-not-valid,
+input[type="tel"].wpcf7-not-valid,
+textarea.wpcf7-not-valid,
+select.wpcf7-not-valid {
+  background: rgba(201, 72, 0, 0.2);
+  border: 1px solid #C94800;
 }

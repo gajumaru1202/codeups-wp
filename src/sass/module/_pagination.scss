@@ -41,12 +41,12 @@
   background-color: $blue;
 }
 
-.pagination__item:first-child {
+.pagination__link.pagination__link--back {
   position: relative;
   margin-right: calc(rem(40) - rem(12));
 }
 
-.pagination__item:first-child .pagination__link::after {
+.pagination__link.pagination__link--back::after {
   position: absolute;
   content: "";
   width: rem(10);
@@ -58,12 +58,12 @@
   left: 45%;
 }
 
-.pagination__item:last-child {
+.pagination__link.pagination__link--next {
   position: relative;
   margin-left: calc(rem(40) - rem(12));
 }
 
-.pagination__item:last-child .pagination__link::after {
+.pagination__link.pagination__link--next::after {
   position: absolute;
   content: "";
   width: rem(10);

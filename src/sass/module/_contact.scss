@@ -60,11 +60,11 @@
   }
 }
 
-.contact__heading-img {
+.contact__heading-image {
   position: relative;
 }
 
-.contact__heading-img::after {
+.contact__heading-image::after {
   position: absolute;
   content: "";
   height: rem(2);
@@ -78,7 +78,7 @@
   }
 }
 
-.contact__heading-img img {
+.contact__heading-image img {
   display: inline-block;
   max-width: rem(174);
   width: 100%;

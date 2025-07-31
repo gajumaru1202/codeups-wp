@@ -49,7 +49,7 @@ $mediaquerys: (
 
 @if $startFrom == sp {
   //pcで表示
-  .sp-hidden {
+  .pc-only {
     display: none;
     @include mq("md") {
       display: block;
@@ -57,14 +57,14 @@ $mediaquerys: (
   }
 
   //モバイルのみ表示
-  .pc-hidden {
+  .sp-only {
     @include mq("md") {
       display: none;
     }
   }
 } @else {
   //pcで表示
-  .sp-hidden {
+  .pc-only {
     display: block;
     @include mq("md") {
       display: none;
@@ -72,7 +72,7 @@ $mediaquerys: (
   }
 
   //モバイルのみ表示
-  .pc-hidden {
+  .sp-only {
     display: none;
     @include mq("md") {
       display: block;
